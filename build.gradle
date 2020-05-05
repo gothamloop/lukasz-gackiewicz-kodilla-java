@@ -18,7 +18,12 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
 }
+dependencies {
+    testImplementation('junit:junit:4.13')
+}
+
 
 test {
     useJUnitPlatform()
 }
+
