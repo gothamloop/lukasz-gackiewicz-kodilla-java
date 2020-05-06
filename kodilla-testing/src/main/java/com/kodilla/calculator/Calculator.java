@@ -11,7 +11,7 @@ public class Calculator {
     }
 
     public int subtract(int a, int b){
-        result_subSum = a -b;
+        result_subSum = a - b;
        return result_subSum;
     }
 }
