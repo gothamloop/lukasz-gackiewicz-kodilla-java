@@ -15,23 +15,16 @@ public class TestingMain {
             System.out.println("Error!");
         }
 
-        // tu umieść kolejny test ->
-        System.out.println("Test - pierwszy test jednostkowy:");
-
-
         System.out.println("Rozpoczynam test klasy Calkulator:");
-
-        if(Calculator.result_addSum == 9){
-            System.out.println("Dodawanie działa poprawnie");
+        Calculator calculator = new Calculator();
+        int result_addSum = calculator.add(4, 5);
+        int result_substractSum = calculator.substract(10, 7);
+        if(Calculator.result_addSum == 9 && Calculator.result_substractSum == 3){
+            System.out.println("Kalkulator działa poprawnie");
         } else {
-            System.out.println("Dodawanie działa niepoprawnie");
+            System.out.println("Kalkulator działa niepoprawnie");
         }
 
-        if(Calculator.result_substractSum == 3){
-            System.out.println("Odejmowanie działa poprawnie");
-        } else {
-            System.out.println("Odejmowanie działa niepoprawnie");
-        }
 
 
 
