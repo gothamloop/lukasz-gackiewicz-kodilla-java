@@ -6,10 +6,12 @@ public class Calculator {
     public static int result_subSum;
 
     public int add(int a, int b){
-       return result_addSum;
+     //   result_addSum = a + b;
+        return result_addSum;
     }
 
     public int subtract(int a, int b){
+     //   result_subSum = a -b;
        return result_subSum;
     }
 }
