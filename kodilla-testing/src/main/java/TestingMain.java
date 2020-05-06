@@ -18,8 +18,8 @@ public class TestingMain {
         System.out.println("Rozpoczynam test klasy Calkulator:");
         Calculator calculator = new Calculator();
         int result_addSum = calculator.add(4, 5);
-        int result_substractSum = calculator.substract(10, 7);
-        if(Calculator.result_addSum == 9 && Calculator.result_substractSum == 3){
+        int result_subSum = calculator.subtract(10, 7);
+        if(result_addSum == 9 && result_subSum == 3){
             System.out.println("Kalkulator działa poprawnie");
         } else {
             System.out.println("Kalkulator działa niepoprawnie");
