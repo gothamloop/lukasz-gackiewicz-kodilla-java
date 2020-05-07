@@ -1,10 +1,9 @@
 package com.kodilla.testing.collection;
 
-import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 
 public class OddNumbersExterminator {
-     public ArrayList<Integer> exterminate(@NotNull ArrayList<Integer> numbers) {
+     public ArrayList<Integer> exterminate(ArrayList<Integer> numbers) {
             ArrayList<Integer> numbersEven = new ArrayList<Integer>();
 
             for(int n=0; n < numbers.size(); n++) {
