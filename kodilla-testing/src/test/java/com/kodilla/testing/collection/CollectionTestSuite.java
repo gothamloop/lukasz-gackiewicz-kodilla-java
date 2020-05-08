@@ -6,10 +6,6 @@ import java.util.ArrayList;
 
 public class CollectionTestSuite {
 
- //   testOddNumbersExterminatorEmptyList (sprawdzi, czy klasa zachowuje się poprawnie, gdy lista jest pusta)
- //   testOddNumbersExterminatorNormalList (sprawdzi, czy klasa zachowuje się poprawnie, gdy lista zawiera liczby parzyste i nieparzyste)
- //   Użyj również adnotacji @Before oraz @After, aby wyświetlić informację o tym, jakie operacje (testy) są aktualnie wykonywane.
-
     @Before
     public void before(){
         System.out.println("Test Case: begin");
