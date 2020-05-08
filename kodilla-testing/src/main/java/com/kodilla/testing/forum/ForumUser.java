@@ -27,14 +27,10 @@ public class ForumUser {
     }
 
     public int getPostsQuantity(){
-        // return 100 temporarily
-        //return 100;
         return posts.size();
     }
 
     public int getCommentsQuantity(){
-        // return 100 temporarily
-        //  return 100;
         return comments.size();
     }
 
