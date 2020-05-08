@@ -2,6 +2,8 @@ package com.kodilla.testing.shape;
 
 import org.junit.*;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class ShapeCollectorTestSuite {
@@ -41,8 +43,17 @@ public class ShapeCollectorTestSuite {
         assertEquals(0, shapeCollector.getGeometricShapes().size());
     }
 
+    @Test
+    public void testShowFigures(){
 
-
+        //Given
+        ShapeCollector shapeCollector = new ShapeCollector();
+        shapeCollector.addFigure(shape);
+        ArrayList<Shape> geometricShapes = new ArrayList<Shape>();
+        geometricShapes.add(shape);
+        ArrayList<Shape> shapesFinalList = shapeCollector.getGeometricShapes();
+        assertEquals(geometricShapes.toString(), shapesFinalList.toString());
+    }
 
 
 }
