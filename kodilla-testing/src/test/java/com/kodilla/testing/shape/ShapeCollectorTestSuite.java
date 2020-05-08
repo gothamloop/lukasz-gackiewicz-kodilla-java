@@ -26,7 +26,6 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testAddFigure(){
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Circle(1);
         shapeCollector.addFigure(shape);
         assertEquals(1, shapeCollector.getGeometricShapes().size());
     }
