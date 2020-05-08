@@ -45,8 +45,6 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testShowFigures(){
-
-        //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(shape);
         ArrayList<Shape> geometricShapes = new ArrayList<Shape>();
