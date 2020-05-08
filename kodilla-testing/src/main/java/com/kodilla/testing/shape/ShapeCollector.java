@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 public class ShapeCollector {
 
-    private ArrayList<Shape> geometricShapes = new ArrayList<Shape>();
+    private final ArrayList<Shape> geometricShapes = new ArrayList<Shape>();
 
 
     public ArrayList<Shape> getGeometricShapes() {
         return geometricShapes;
     }
+
 
     public void addFigure(Shape shape){
         geometricShapes.add(shape);
@@ -22,7 +23,6 @@ public class ShapeCollector {
     public Shape getFigure(int n){
         return geometricShapes.get(n);
     }
-
 
     public void showFigures(){
         System.out.println(geometricShapes);
