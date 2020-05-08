@@ -29,5 +29,19 @@ public class ShapeCollectorTestSuite {
         shapeCollector.addFigure(shape);
         assertEquals(1, shapeCollector.getGeometricShapes().size());
     }
+
+    @Test
+    public void testRemoveFigure(){
+        ShapeCollector shapeCollector = new ShapeCollector();
+        shapeCollector.addFigure(shape);
+        boolean result = shapeCollector.removeFigure(shape);
+        Assert.assertTrue(result);
+        assertEquals(0, shapeCollector.getGeometricShapes().size());
+    }
+
+
+
+
+
 }
 

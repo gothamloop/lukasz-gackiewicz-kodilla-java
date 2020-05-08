@@ -28,5 +28,4 @@ public class ShapeCollector {
         System.out.println(geometricShapes);
     }
 
-
 }
