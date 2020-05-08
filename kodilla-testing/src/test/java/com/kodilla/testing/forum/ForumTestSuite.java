@@ -39,3 +39,5 @@ public class ForumTestSuite {
         Assert.assertEquals("John Smith", result);
     }
 }
+
+
