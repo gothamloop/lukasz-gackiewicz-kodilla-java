@@ -6,6 +6,8 @@ import static org.junit.Assert.assertEquals;
 
 public class ShapeCollectorTestSuite {
 
+    private Shape shape;
+
     @Before
     public void before(){
         System.out.println("Test Case: begin");
