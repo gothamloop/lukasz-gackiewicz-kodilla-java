@@ -31,7 +31,8 @@ public class ShapeCollectorTestSuite {
     public void testAddFigure(){
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(shape);
-        assertEquals(1, shapeCollector.getGeometricShapes().size());
+        //assertEquals(1, shapeCollector.getGeometricShapes().size());
+        assertEquals(1, shapeCollector.getFigure(1));
     }
 
     @Test

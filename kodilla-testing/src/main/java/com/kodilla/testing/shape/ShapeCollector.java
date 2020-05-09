@@ -1,6 +1,7 @@
 package com.kodilla.testing.shape;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class ShapeCollector {
 
@@ -28,4 +29,4 @@ public class ShapeCollector {
         System.out.println(geometricShapes);
     }
 
-}
+    }
