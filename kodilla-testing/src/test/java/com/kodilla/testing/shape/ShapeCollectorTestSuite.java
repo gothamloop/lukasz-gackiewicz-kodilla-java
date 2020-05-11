@@ -45,7 +45,5 @@ public class ShapeCollectorTestSuite {
         Assert.assertTrue(result);
         assertFalse(shapeCollector.removeFigure(shape));
     }
-
-
 }
 
