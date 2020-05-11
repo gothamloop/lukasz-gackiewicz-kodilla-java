@@ -2,6 +2,10 @@ package com.kodilla.testing.forum.statistics;
 
 import org.junit.*;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class StatisticsTestSuite {
 
     @Before
@@ -21,7 +25,10 @@ public class StatisticsTestSuite {
 
     @Test
     public void testStatisticsPostsEqualsZero(){
-
+        Statistics statisticsMock = mock(Statistics.class);
+        when(statisticsMock.postsCount()).thenReturn(0);
+        CountStatistics.calculateAdvStatistics(statisticsMock);
+        assertEquals(0, CountStatistics.getNumberOfPosts());
     }
 
     @Test

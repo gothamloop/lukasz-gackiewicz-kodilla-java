@@ -2,19 +2,19 @@ package com.kodilla.testing.forum.statistics;
 
 public class CountStatistics {
 
-    private int numberOfUsers;
-    private int numberOfPosts;
-    private int numberOfComments;
-    private int avgPostsPerUser;
-    private int avgCommentsPerUser;
-    private int avgCommentsPerPost;
+    private static int numberOfUsers;
+    private static int numberOfPosts;
+    private static int numberOfComments;
+    private static int avgPostsPerUser;
+    private static int avgCommentsPerUser;
+    private static int avgCommentsPerPost;
 
 
     public int getNumberOfUsersUsers() {
         return numberOfUsers;
     }
 
-    public int getNumberOfPosts() {
+    public static int getNumberOfPosts() {
         return numberOfPosts;
     }
 
@@ -34,7 +34,7 @@ public class CountStatistics {
         return avgCommentsPerPost;
     }
 
-   private void calculateAdvStatistics(Statistics statistics){
+   static void calculateAdvStatistics(Statistics statistics){
        numberOfUsers = statistics.usersNames().size();
        numberOfPosts = statistics.postsCount();
        numberOfComments = statistics.commentsCount();
