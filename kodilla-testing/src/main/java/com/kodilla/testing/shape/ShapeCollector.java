@@ -7,9 +7,9 @@ public class ShapeCollector {
 
     private final ArrayList<Shape> geometricShapes = new ArrayList<Shape>();
 
-    public ArrayList<Shape> getGeometricShapes() {
-        return geometricShapes;
-    }
+    //public ArrayList<Shape> getGeometricShapes() {
+    //    return geometricShapes;
+   // }
 
     public void addFigure(Shape shape){
         geometricShapes.add(shape);

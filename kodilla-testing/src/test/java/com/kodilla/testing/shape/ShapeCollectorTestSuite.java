@@ -38,23 +38,12 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testRemoveFigure(){
-
+        Shape shape = new Circle(1);
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(shape);
         boolean result = shapeCollector.removeFigure(shape);
         Assert.assertTrue(result);
         assertFalse(shapeCollector.removeFigure(shape));
-    }
-
-    @Test
-    public void testShowFigures(){
-        Shape shape = new Circle(1);
-        ShapeCollector shapeCollector = new ShapeCollector();
-        shapeCollector.addFigure(shape);
-        ArrayList<Shape> geometricShapes = new ArrayList<Shape>();
-        geometricShapes.add(shape);
-        ArrayList<Shape> shapesFinalList = shapeCollector.getGeometricShapes();
-        assertEquals(geometricShapes.toString(), shapesFinalList.toString());
     }
 
 
