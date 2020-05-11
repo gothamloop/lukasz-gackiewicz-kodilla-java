@@ -37,20 +37,22 @@ public class CountStatistics {
 
 
    private void calculateAdvStatistics(Statistics statistics){
-       numberOfUsers
-
-
-
-
-
-
+       numberOfUsers = statistics.usersNames().size();
+       numberOfPosts = statistics.postsCount();
+       numberOfComments = statistics.commentsCount();
+       avgPostsPerUser = (statistics.postsCount()/numberOfUsers);
+       avgCommentsPerUser = (statistics.commentsCount()/statistics.usersNames().size());
+       avgCommentsPerPost = (statistics.commentsCount()/statistics.postsCount());
    }
 
 
-
-
    private void showStatistics(){
-
+       System.out.println("Numbers of users: " + numberOfUsers);
+       System.out.println("Numbers of posts: " + numberOfPosts);
+       System.out.println("Numbers of comments: " + numberOfComments);
+       System.out.println("Average posts per user: " + avgPostsPerUser);
+       System.out.println("Average comments per user: " + avgCommentsPerUser);
+       System.out.println("Average comments per post: " + avgCommentsPerPost);
    }
 
 
