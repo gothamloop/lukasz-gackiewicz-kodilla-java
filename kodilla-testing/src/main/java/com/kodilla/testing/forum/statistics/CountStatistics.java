@@ -40,7 +40,7 @@ public class CountStatistics {
        numberOfUsers = statistics.usersNames().size();
        numberOfPosts = statistics.postsCount();
        numberOfComments = statistics.commentsCount();
-       avgPostsPerUser = (statistics.postsCount()/numberOfUsers);
+       avgPostsPerUser = (statistics.postsCount()/statistics.usersNames().size());
        avgCommentsPerUser = (statistics.commentsCount()/statistics.usersNames().size());
        avgCommentsPerPost = (statistics.commentsCount()/statistics.postsCount());
    }
