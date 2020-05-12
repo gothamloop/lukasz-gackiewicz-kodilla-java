@@ -13,23 +13,18 @@ public class CountStatistics {
     public int getNumberOfUsersUsers() {
         return numberOfUsers;
     }
-
     public static int getNumberOfPosts() {
         return numberOfPosts;
     }
-
     public int getNumberOfComments() {
         return numberOfComments;
     }
-
     public int getAvgPostsPerUser() {
         return avgPostsPerUser;
     }
-
     public int getAvgCommentsPerUser() {
         return avgCommentsPerUser;
     }
-
     public int getAvgCommentsPerPost() {
         return avgCommentsPerPost;
     }
@@ -38,13 +33,47 @@ public class CountStatistics {
        numberOfUsers = statistics.usersNames().size();
        numberOfPosts = statistics.postsCount();
        numberOfComments = statistics.commentsCount();
-     //  avgPostsPerUser = (statistics.postsCount() / numberOfUsers);
-    //   avgCommentsPerUser = (statistics.commentsCount() / numberOfUsers);
-    //   avgCommentsPerPost = (statistics.commentsCount() / numberOfPosts);
+       avgPostsPerUser = (statistics.postsCount() / numberOfUsers);
+       avgCommentsPerUser = (statistics.commentsCount() / numberOfUsers);
+       avgCommentsPerPost = (statistics.commentsCount() / numberOfPosts);
+
+
+
+    if (numberOfUsers > 0) {
+        avgPostsPerUser = statistics.postsCount()/numberOfUsers;
+    } else {
+        return 0;
+    }
+
+    if (numberOfUsers > 0) {
+       avgCommentsPerUser = statistics.commentsCount()/numberOfUsers;
+    } else {
+       return 0;
+    }
+
+    if (numberOfUsers > 0) {
+        avgCommentsPerPost = statistics.commentsCount()/numberOfPosts;
+    } else {
+       return 0;
+    }
+
+
+
+
+
 
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
 
 
 
