@@ -5,7 +5,7 @@ public class CountStatistics {
     private static int numberOfUsers;
     private static int numberOfPosts;
     private static int numberOfComments;
-    private static int avgPostsPerUser;
+    private static double avgPostsPerUser;
     private static int avgCommentsPerUser;
     private static int avgCommentsPerPost;
 
@@ -33,7 +33,7 @@ public class CountStatistics {
         return avgCommentsPerPost;
     }
 
-    static int calculateAdvStatistics(Statistics statistics) {
+    private int calculateAdvStatistics(Statistics statistics) {
         numberOfUsers = statistics.usersNames().size();
         numberOfPosts = statistics.postsCount();
         numberOfComments = statistics.commentsCount();
@@ -44,29 +44,43 @@ public class CountStatistics {
         return 0;
     }
 
-    private static int methodAvgPostsPerUser() {
+
+    private double methodAvgPostsPerUser(Statistics statistics) {
         if (numberOfUsers > 0) {
-            avgPostsPerUser = statistics.postsCount() / numberOfUsers;
+            return (double) statistics.postsCount() / numberOfUsers;
         } else {
             return 0;
         }
     }
 
-    private static int methodAvgCommentsPerUser() {
+
+
+  /*  private int methodAvgPostsPerUser() {
+        if (numberOfUsers > 0) {
+            avgPostsPerUser = (numberOfPosts / numberOfUsers);
+        } else {
+            return 0;
+        }
+        return 0;
+    }
+*/
+    private int methodAvgCommentsPerUser() {
             if (numberOfUsers > 0) {
-                avgCommentsPerUser = statistics.commentsCount() / numberOfUsers;
+                avgCommentsPerUser = (numberOfComments / numberOfUsers);
             } else {
                 return 0;
             }
+        return 0;
     }
 
-    private static int methodAvgCommentsPerPost() {
+    private int methodAvgCommentsPerPost() {
             if (numberOfUsers > 0)
             {
-                avgCommentsPerPost = statistics.commentsCount() / numberOfPosts;
+                avgCommentsPerPost = (numberOfComments / numberOfPosts);
             } else {
                 return 0;
             }
+        return 0;
     }
 
 
