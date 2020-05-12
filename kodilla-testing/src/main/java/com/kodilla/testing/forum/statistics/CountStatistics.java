@@ -2,20 +2,18 @@ package com.kodilla.testing.forum.statistics;
 
 public class CountStatistics {
 
-    private static int numberOfUsers;
-    private static int numberOfPosts;
-    private static int numberOfComments;
-    private static double avgPostsPerUser;
-    private static int avgCommentsPerUser;
-    private static int avgCommentsPerPost;
+    private int numberOfUsers;
+    private int numberOfPosts;
+    private int numberOfComments;
+    private double avgPostsPerUser;
+    private double avgCommentsPerUser;
+    private double avgCommentsPerPost;
 
     public int getNumberOfUsersUsers() {
         return numberOfUsers;
     }
 
-    public int getNumberOfPosts() {
-        return numberOfPosts;
-    }
+    public int getNumberOfPosts() { return numberOfPosts; }
 
     public int getNumberOfComments() {
         return numberOfComments;
@@ -37,9 +35,9 @@ public class CountStatistics {
         numberOfUsers = statistics.usersNames().size();
         numberOfPosts = statistics.postsCount();
         numberOfComments = statistics.commentsCount();
-        avgPostsPerUser = methodAvgPostsPerUser();
-        avgCommentsPerUser = methodAvgCommentsPerUser();
-        avgCommentsPerPost = methodAvgCommentsPerPost();
+        avgPostsPerUser = methodAvgPostsPerUser(statistics);
+        avgCommentsPerUser = methodAvgCommentsPerUser(statistics);
+        avgCommentsPerPost = methodAvgCommentsPerPost(statistics);
 
         return 0;
     }
@@ -53,37 +51,21 @@ public class CountStatistics {
         }
     }
 
-
-
-  /*  private int methodAvgPostsPerUser() {
-        if (numberOfUsers > 0) {
-            avgPostsPerUser = (numberOfPosts / numberOfUsers);
-        } else {
-            return 0;
-        }
-        return 0;
-    }
-*/
-    private int methodAvgCommentsPerUser() {
+    private double methodAvgCommentsPerUser(Statistics statistics) {
             if (numberOfUsers > 0) {
-                avgCommentsPerUser = (numberOfComments / numberOfUsers);
+                return (double) statistics.commentsCount() / numberOfUsers;
             } else {
                 return 0;
             }
-        return 0;
     }
 
-    private int methodAvgCommentsPerPost() {
-            if (numberOfUsers > 0)
-            {
-                avgCommentsPerPost = (numberOfComments / numberOfPosts);
+    private double methodAvgCommentsPerPost(Statistics statistics) {
+            if (numberOfPosts > 0) {
+                return (double) statistics.commentsCount() / numberOfPosts;
             } else {
                 return 0;
             }
-        return 0;
     }
-
-
 
    private void showStatistics(){
        System.out.println("Numbers of users: " + numberOfUsers);
