@@ -71,16 +71,6 @@ public class CountStatistics {
 
 
 
-
-
-
-
-
-
-
-
-
-
    private void showStatistics(){
        System.out.println("Numbers of users: " + numberOfUsers);
        System.out.println("Numbers of posts: " + numberOfPosts);
@@ -91,4 +81,4 @@ public class CountStatistics {
    }
 
 
-}
+}}
