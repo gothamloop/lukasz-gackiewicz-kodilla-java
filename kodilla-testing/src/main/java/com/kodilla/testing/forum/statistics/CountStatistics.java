@@ -13,7 +13,7 @@ public class CountStatistics {
         return numberOfUsers;
     }
 
-    public static int getNumberOfPosts() {
+    public int getNumberOfPosts() {
         return numberOfPosts;
     }
 
@@ -21,15 +21,15 @@ public class CountStatistics {
         return numberOfComments;
     }
 
-    public int getAvgPostsPerUser() {
+    public double getAvgPostsPerUser() {
         return avgPostsPerUser;
     }
 
-    public int getAvgCommentsPerUser() {
+    public double getAvgCommentsPerUser() {
         return avgCommentsPerUser;
     }
 
-    public int getAvgCommentsPerPost() {
+    public double getAvgCommentsPerPost() {
         return avgCommentsPerPost;
     }
 
