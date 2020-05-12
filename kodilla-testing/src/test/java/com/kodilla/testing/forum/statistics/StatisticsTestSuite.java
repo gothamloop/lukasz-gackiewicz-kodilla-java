@@ -23,14 +23,14 @@ public class StatisticsTestSuite {
     @AfterClass
     public static void afterClass() { System.out.println("Test Suite: end");}
 
-    @Test
+  /*  @Test
     public void testStatisticsPostsEqualsZero(){
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(0);
         CountStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(0, CountStatistics.getNumberOfPosts());
     }
-
+*/
     @Test
     public void testStatisticsPostsEquals1000(){
 
