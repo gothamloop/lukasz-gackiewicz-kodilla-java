@@ -44,30 +44,30 @@ public class CountStatistics {
         return 0;
     }
 
-    private int methodAvgPostsPerUser() {
-            if(numberOfUsers >0)
-            {
-                avgPostsPerUser = statistics.postsCount() / numberOfUsers;
-            } else    {
-                return 0;
-            }
+    private static int methodAvgPostsPerUser() {
+        if (numberOfUsers > 0) {
+            avgPostsPerUser = statistics.postsCount() / numberOfUsers;
+        } else {
+            return 0;
+        }
+    }
 
-
-    private int methodAvgCommentsPerUser() {
+    private static int methodAvgCommentsPerUser() {
             if (numberOfUsers > 0) {
                 avgCommentsPerUser = statistics.commentsCount() / numberOfUsers;
             } else {
                 return 0;
             }
-        }
+    }
 
-    private int methodAvgCommentsPerPost() {
-            if (numberOfUsers > 0) {
+    private static int methodAvgCommentsPerPost() {
+            if (numberOfUsers > 0)
+            {
                 avgCommentsPerPost = statistics.commentsCount() / numberOfPosts;
             } else {
                 return 0;
             }
-        }
+    }
 
 
 
@@ -81,4 +81,4 @@ public class CountStatistics {
    }
 
 
-}}
+}
