@@ -34,14 +34,25 @@ public class CountStatistics {
         return avgCommentsPerPost;
     }
 
-   static void calculateAdvStatistics(Statistics statistics){
+   static int calculateAdvStatistics(Statistics statistics){
        numberOfUsers = statistics.usersNames().size();
        numberOfPosts = statistics.postsCount();
        numberOfComments = statistics.commentsCount();
        avgPostsPerUser = (statistics.postsCount()/statistics.usersNames().size());
        avgCommentsPerUser = (statistics.commentsCount()/statistics.usersNames().size());
        avgCommentsPerPost = (statistics.commentsCount()/statistics.postsCount());
+
+
+       if (numberOfPosts == 0) {
+           System.out.println("numberOfPosts can't be 0!");
+       } else {
+           return statistics.postsCount();
+       }
+       return 0;
    }
+
+
+
 
    private void showStatistics(){
        System.out.println("Numbers of users: " + numberOfUsers);

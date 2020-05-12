@@ -34,6 +34,9 @@ public class StatisticsTestSuite {
     @Test
     public void testStatisticsPostsEquals1000(){
 
+
+
+
     }
 
     @Test
