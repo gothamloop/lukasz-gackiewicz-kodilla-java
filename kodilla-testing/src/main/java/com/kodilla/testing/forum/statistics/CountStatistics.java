@@ -9,64 +9,65 @@ public class CountStatistics {
     private static int avgCommentsPerUser;
     private static int avgCommentsPerPost;
 
-
     public int getNumberOfUsersUsers() {
         return numberOfUsers;
     }
+
     public static int getNumberOfPosts() {
         return numberOfPosts;
     }
+
     public int getNumberOfComments() {
         return numberOfComments;
     }
+
     public int getAvgPostsPerUser() {
         return avgPostsPerUser;
     }
+
     public int getAvgCommentsPerUser() {
         return avgCommentsPerUser;
     }
+
     public int getAvgCommentsPerPost() {
         return avgCommentsPerPost;
     }
 
-   static int calculateAdvStatistics(Statistics statistics) {
-       numberOfUsers = statistics.usersNames().size();
-       numberOfPosts = statistics.postsCount();
-       numberOfComments = statistics.commentsCount();
-       avgPostsPerUser = (statistics.postsCount() / numberOfUsers);
-       avgCommentsPerUser = (statistics.commentsCount() / numberOfUsers);
-       avgCommentsPerPost = (statistics.commentsCount() / numberOfPosts);
+    static int calculateAdvStatistics(Statistics statistics) {
+        numberOfUsers = statistics.usersNames().size();
+        numberOfPosts = statistics.postsCount();
+        numberOfComments = statistics.commentsCount();
+        avgPostsPerUser = methodAvgPostsPerUser();
+        avgCommentsPerUser = methodAvgCommentsPerUser();
+        avgCommentsPerPost = methodAvgCommentsPerPost();
 
-
-
-    if (numberOfUsers > 0) {
-        avgPostsPerUser = statistics.postsCount()/numberOfUsers;
-    } else {
         return 0;
     }
 
-    if (numberOfUsers > 0) {
-       avgCommentsPerUser = statistics.commentsCount()/numberOfUsers;
-    } else {
-       return 0;
-    }
-
-    if (numberOfUsers > 0) {
-        avgCommentsPerPost = statistics.commentsCount()/numberOfPosts;
-    } else {
-       return 0;
-    }
+    private int methodAvgPostsPerUser() {
+            if(numberOfUsers >0)
+            {
+                avgPostsPerUser = statistics.postsCount() / numberOfUsers;
+            } else    {
+                return 0;
+            }
 
 
+    private int methodAvgCommentsPerUser() {
+            if (numberOfUsers > 0) {
+                avgCommentsPerUser = statistics.commentsCount() / numberOfUsers;
+            } else {
+                return 0;
+            }
+        }
 
-
-
-
-
-    return 0;
-}
-
-
+    private int methodAvgCommentsPerPost() {
+            if (numberOfUsers > 0) {
+                avgCommentsPerPost = statistics.commentsCount() / numberOfPosts;
+            } else {
+                return 0;
+            }
+        }
 
 
 

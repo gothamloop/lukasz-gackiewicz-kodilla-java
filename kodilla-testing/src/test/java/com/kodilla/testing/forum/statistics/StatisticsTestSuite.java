@@ -31,13 +31,14 @@ public class StatisticsTestSuite {
         assertEquals(0, CountStatistics.getNumberOfPosts());
     }
 
-    @Test
+  /*  @Test
     public void testStatisticsPostsEquals1000(){
+        Statistics statisticsMock = mock(Statistics.class);
+        when(statisticsMock.postsCount()).thenReturn(1000);
+        CountStatistics.calculateAdvStatistics(statisticsMock);
+        assertEquals(1000, CountStatistics.getNumberOfPosts());
 
-
-
-
-    }
+    } */
 
     @Test
     public void testStatisticsCommentsEqualsZero(){
