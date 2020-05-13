@@ -83,7 +83,4 @@ public class StatisticsTestSuite {
         assertEquals(0, countStatistics.getNumberOfUsersUsers());
     }
 
-
-
-
 }
