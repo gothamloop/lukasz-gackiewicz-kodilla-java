@@ -7,6 +7,8 @@ import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.person.People;
 import com.kodilla.stream.book.BookDirectory;
 import com.kodilla.stream.book.Book;
+
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Map;
@@ -105,14 +107,13 @@ public class StreamMain {
 
         Map<Integer, Forum> theResultMapOfUser = theForum.getUserList().stream()
                 .filter(ourForum -> ourForum.getSex() == 'M')
-                .filter(ourForum -> ourForum.getBirthDate() > 20)
+                .filter(ourForum -> ourForum.getBirthDate() > (2000, 1, 1))
                 .filter(ourForum -> ourForum.getQuantityOfPosts() >= 1)
                 .collect(Collectors.toMap(ForumUser::getUniqueID, ourForum -> ourForum));
 
         theResultMapOfUser.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
-
 
 
 
