@@ -31,7 +31,8 @@ public class CountStatistics {
         return avgCommentsPerPost;
     }
 
-    private int calculateAdvStatistics(Statistics statistics) {
+    public void calculateAdvStatistics(Statistics statistics) {
+    //private int calculateAdvStatistics(Statistics statistics) {
         numberOfUsers = statistics.usersNames().size();
         numberOfPosts = statistics.postsCount();
         numberOfComments = statistics.commentsCount();
@@ -39,7 +40,7 @@ public class CountStatistics {
         avgCommentsPerUser = methodAvgCommentsPerUser(statistics);
         avgCommentsPerPost = methodAvgCommentsPerPost(statistics);
 
-        return 0;
+        //return 0;
     }
 
 

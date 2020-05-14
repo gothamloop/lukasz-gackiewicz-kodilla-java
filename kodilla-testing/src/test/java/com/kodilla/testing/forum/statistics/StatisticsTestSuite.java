@@ -39,7 +39,7 @@ public class StatisticsTestSuite {
         countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(0, countStatistics.getNumberOfPosts());
     }
-/*
+
     @Test
     public void testStatisticsPostsEquals1000(){
         Statistics statisticsMock = mock(Statistics.class);
@@ -90,12 +90,13 @@ public class StatisticsTestSuite {
 
 
     @Test
-    public void testStatisticsNumberofUsersEquals100(){
+    public void testStatisticsNumberofUsersEquals100() {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.usersNames().size()).thenReturn(100);
         CountStatistics countStatistics = new CountStatistics();
         countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(0, countStatistics.getNumberOfUsersUsers());
     }
+/*
 */
 }
