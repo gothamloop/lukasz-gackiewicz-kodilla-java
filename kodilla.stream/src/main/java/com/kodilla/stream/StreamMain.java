@@ -1,6 +1,7 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.person.People;
@@ -9,7 +10,7 @@ import com.kodilla.stream.book.Book;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Map;
-
+import com.kodilla.stream.forumuser.ForumUser;
 
 
 
@@ -90,7 +91,6 @@ public class StreamMain {
         theResultMapOfBooks.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
-*/
 
         BookDirectory theBookDirectory = new BookDirectory();
         String theResultStringOfBooks = theBookDirectory.getList().stream()
@@ -99,13 +99,19 @@ public class StreamMain {
                 .collect(Collectors.joining(",\n","<<",">>"));
 
         System.out.println(theResultStringOfBooks);
+*/
 
+        Forum theForum = new Forum();
 
+        Map<Integer, Forum> theResultMapOfUser = theForum.getUserList().stream()
+                .filter(ourForum -> ourForum.getSex() == 'M')
+                .filter(ourForum -> ourForum.getBirthDate() > 20)
+                .filter(ourForum -> ourForum.getQuantityOfPosts() >= 1)
+                .collect(Collectors.toMap(ForumUser::getUniqueID, ourForum -> ourForum));
 
-
-
-
-
+        theResultMapOfUser.entrySet().stream()
+                .map(entry -> entry.getKey() + ": " + entry.getValue())
+                .forEach(System.out::println);
 
 
 
