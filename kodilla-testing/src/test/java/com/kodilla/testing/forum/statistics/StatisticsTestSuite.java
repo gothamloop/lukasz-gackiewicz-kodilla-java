@@ -44,7 +44,8 @@ public class StatisticsTestSuite {
     public void testStatisticsPostsEquals1000(){
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(1000);
-        CountStatistics.calculateAdvStatistics(statisticsMock);
+        CountStatistics countStatistics = new CountStatistics();
+        countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(1000, countStatistics.getNumberOfPosts());
 
     }
@@ -53,7 +54,8 @@ public class StatisticsTestSuite {
     public void testStatisticsCommentsEqualsZero(){
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.commentsCount()).thenReturn(0);
-        CountStatistics.calculateAdvStatistics(statisticsMock);
+        CountStatistics countStatistics = new CountStatistics();
+        countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(0, countStatistics.getNumberOfComments());
     }
 
@@ -62,7 +64,8 @@ public class StatisticsTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.commentsCount()).thenReturn(5);
         when(statisticsMock.postsCount()).thenReturn(3);
-        CountStatistics.calculateAdvStatistics(statisticsMock);
+        CountStatistics countStatistics = new CountStatistics();
+        countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(5, countStatistics.getNumberOfComments());
     }
 
@@ -71,7 +74,8 @@ public class StatisticsTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.commentsCount()).thenReturn(5);
         when(statisticsMock.postsCount()).thenReturn(12);
-        CountStatistics.calculateAdvStatistics(statisticsMock);
+        CountStatistics countStatistics = new CountStatistics();
+        countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(5, countStatistics.getNumberOfComments());
     }
 
@@ -79,7 +83,8 @@ public class StatisticsTestSuite {
     public void testStatisticsNumberOfUsersEqualsZero(){
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.usersNames().size()).thenReturn(0);
-        CountStatistics.calculateAdvStatistics(statisticsMock);
+        CountStatistics countStatistics = new CountStatistics();
+        countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(0, countStatistics.getNumberOfUsersUsers());
     }
 
@@ -88,7 +93,8 @@ public class StatisticsTestSuite {
     public void testStatisticsNumberofUsersEquals100(){
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.usersNames().size()).thenReturn(100);
-        CountStatistics.calculateAdvStatistics(statisticsMock);
+        CountStatistics countStatistics = new CountStatistics();
+        countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(0, countStatistics.getNumberOfUsersUsers());
     }
 */
