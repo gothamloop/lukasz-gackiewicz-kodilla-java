@@ -3,6 +3,7 @@ package com.kodilla.testing.forum.statistics;
 import org.junit.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -26,15 +27,12 @@ public class StatisticsTestSuite {
     public static void afterClass() { System.out.println("Test Suite: end");}
 
 
-
-
     @Test
     public void testStatisticsPostsEqualsZero(){
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(0);
         when(statisticsMock.commentsCount()).thenReturn(0);
         when(statisticsMock.usersNames()).thenReturn(new ArrayList<>());
-
         CountStatistics countStatistics = new CountStatistics();
         countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(0, countStatistics.getNumberOfPosts());
@@ -81,8 +79,9 @@ public class StatisticsTestSuite {
 
     @Test
     public void testStatisticsNumberOfUsersEqualsZero(){
+        List<String> tehListMock = new ArrayList<>();
         Statistics statisticsMock = mock(Statistics.class);
-        when(statisticsMock.usersNames().size()).thenReturn(0);
+        when(statisticsMock.usersNames()).thenReturn(tehListMock);
         CountStatistics countStatistics = new CountStatistics();
         countStatistics.calculateAdvStatistics(statisticsMock);
         assertEquals(0, countStatistics.getNumberOfUsersUsers());
@@ -90,13 +89,17 @@ public class StatisticsTestSuite {
 
 
     @Test
-    public void testStatisticsNumberofUsersEquals100() {
+    public void testStatisticsNumberOfUsersEquals100() {
+        List<String> theListMock = new ArrayList<>();
+        for(int i=0 ; i<100 ; i++){
+            theListMock.add("An user");
+        }
         Statistics statisticsMock = mock(Statistics.class);
-        when(statisticsMock.usersNames().size()).thenReturn(100);
+        when(statisticsMock.usersNames()).thenReturn(theListMock);
         CountStatistics countStatistics = new CountStatistics();
         countStatistics.calculateAdvStatistics(statisticsMock);
-        assertEquals(0, countStatistics.getNumberOfUsersUsers());
+        assertEquals(100, countStatistics.getNumberOfUsersUsers());
     }
-/*
-*/
+
+
 }
