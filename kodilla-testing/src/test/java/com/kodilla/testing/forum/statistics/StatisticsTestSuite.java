@@ -92,8 +92,7 @@ public class StatisticsTestSuite {
     public void testStatisticsNumberOfUsersEquals100() {
         List<String> theListMock = new ArrayList<>();
         for(int i=0 ; i<100 ; i++){
-            theListMock.add("An user");
-        }
+            theListMock.add("An user");}
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.usersNames()).thenReturn(theListMock);
         CountStatistics countStatistics = new CountStatistics();
