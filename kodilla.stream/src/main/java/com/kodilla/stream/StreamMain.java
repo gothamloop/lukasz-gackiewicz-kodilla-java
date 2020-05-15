@@ -101,7 +101,7 @@ public class StreamMain {
                 .collect(Collectors.joining(",\n","<<",">>"));
 
         System.out.println(theResultStringOfBooks);
-*/
+
 
         Forum theForum = new Forum();
 
@@ -116,7 +116,7 @@ public class StreamMain {
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
 
-
+*/
 
 
 
