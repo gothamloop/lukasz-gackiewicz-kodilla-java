@@ -105,7 +105,7 @@ public class StreamMain {
 */
         Forum theForum = new Forum();
 
-        Map<Integer, Forum> theResultMapOfUser = theForum.getUserList().stream()
+        Map<Integer, ForumUser> theResultMapOfUser = theForum.getUserList().stream()
                 .filter(ourForum -> ourForum.getSex() == 'M')
                 .filter(ourForum -> ourForum.getBirthDate().getYear() >= 2000)
                 //.filter(ourForum -> ourForum.BirthDate.getYear() > 2000)
