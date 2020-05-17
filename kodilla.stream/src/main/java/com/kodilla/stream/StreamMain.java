@@ -102,7 +102,7 @@ public class StreamMain {
 
         System.out.println(theResultStringOfBooks);
 
-*/
+
         Forum theForum = new Forum();
 
         Map<Integer, ForumUser> theResultMapOfUser = theForum.getUserList().stream()
@@ -114,7 +114,7 @@ public class StreamMain {
         theResultMapOfUser.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
-
+*/
 
 
 
