@@ -11,8 +11,6 @@ import static org.mockito.Mockito.*;
 
 public class BookDirectoryTestSuite {
 
-
-
     @Test
     public void testListBooksWithConditionsReturnList() {
         // Given
@@ -88,6 +86,8 @@ public class BookDirectoryTestSuite {
 
     @Test
     public void testListBooksInHandsOfZeroBooks(){
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
         List<Book>listWithZeroBooks = new ArrayList<>();
         when(libraryDatabaseMock.listBooksInHandsOf(any(LibraryUser.class))).thenReturn(listWithZeroBooks);
@@ -98,6 +98,8 @@ public class BookDirectoryTestSuite {
 
     @Test
     public void testListBooksInHandsOfOneBook(){
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
         List<Book>listOfOneBook = generateListOfNBooks(1);
         when(libraryDatabaseMock.listBooksInHandsOf(any(LibraryUser.class))).thenReturn(listOfOneBook);
@@ -108,6 +110,8 @@ public class BookDirectoryTestSuite {
 
     @Test
     public void testListBooksInHandsOfFiveBooks(){
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
         List<Book>listOfFiveBooks = generateListOfNBooks(5);
         when(libraryDatabaseMock.listBooksInHandsOf(any(LibraryUser.class))).thenReturn(listOfFiveBooks);
