@@ -156,5 +156,6 @@ public class BoardTestSuite {
                 .forEach(System.out::println);
 
 
+                Assert.assertEquals(3.0, averageWorkingOnTask, 0.0001);
     }
 }
