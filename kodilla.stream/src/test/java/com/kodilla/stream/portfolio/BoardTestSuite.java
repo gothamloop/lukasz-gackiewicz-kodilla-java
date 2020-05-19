@@ -149,31 +149,12 @@ public class BoardTestSuite {
         double averageWorkingOnTask = project.getTaskLists().stream()
                 .filter(unfinishedTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .map(Task::getCreated)
-                .filter(d -> d.compareTo(LocalDate.now().minusDays(10)) <= 0)
+                .filter(t -> t.getDeadline().isBefore(LocalDate.now()))
+                .mapToInt(Integer::intValue)
                 .average()
                 .getAsDouble();
                 .forEach(System.out::println);
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
