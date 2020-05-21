@@ -1,6 +1,7 @@
 package com.kodilla.stream.world;
 
 import com.kodilla.stream.sand.Asia;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -43,10 +44,11 @@ public class WorldTestSuite {
         asia.addCountry(turkey);
 
 
+        BigDecimal totalPeople = world.getPeopleQuantity();
+        //1438707163+1380004385+126519062+145927633+84232553 = ‭3,175,390,796‬
 
-
-
-
+        BigDecimal expectedPeople = new BigDecimal("3175390796");
+        Assert.assertEquals(expectedPeople, totalPeople);
 
 
 
