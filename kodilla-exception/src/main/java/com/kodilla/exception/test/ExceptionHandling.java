@@ -13,7 +13,7 @@ public class ExceptionHandling {
         SecondChallenge secondChallenge = new SecondChallenge();
         String score = "";
         try {
-            score = secondChallenge.probablyIWillThrowException(5.1, 4.9);
+            score = secondChallenge.probablyIWillThrowException(5, 4);
         } catch (Exception e) {
             System.out.println("Java exception: " + e);
 
