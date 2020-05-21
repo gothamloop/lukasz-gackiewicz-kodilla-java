@@ -16,7 +16,7 @@ public class ExceptionHandling {
             score = secondChallenge.probablyIWillThrowException(5.1, 4.9);
         } catch (Exception e) {
             System.out.println("Java exception: " + e);
-            ;
+
         } finally {
             System.out.println(score);
         }
