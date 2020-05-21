@@ -12,6 +12,7 @@ public final class Country {
         this.peopleQuantity = peopleQuantity;
     }
 
+
     public String getNameOfCountry() {
         return nameOfCountry;
     }

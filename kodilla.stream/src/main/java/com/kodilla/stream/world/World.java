@@ -6,7 +6,12 @@ import java.util.List;
 
 public final class World {
 
+
     private final List<Continent> listOfContinents = new ArrayList<>();
+
+
+    public World() {
+    }
 
     public List<Continent> getListOfContinents() {
         return listOfContinents;
@@ -22,4 +27,6 @@ public final class World {
         return peopleQuantityOnTheWorld;
     }
 
+    public void addContinent(Continent continent) {
+    }
 }

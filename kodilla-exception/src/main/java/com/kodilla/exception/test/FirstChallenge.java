@@ -22,8 +22,10 @@ public class FirstChallenge {
         double result=0;
         try{
             result = FirstChallenge.divide(3, 0);
+
         } catch (ArithmeticException e) {
             System.out.println("You should not divide a number by zero or zero by a number! " + e);
+
         } finally {
             System.out.println(result);
         }

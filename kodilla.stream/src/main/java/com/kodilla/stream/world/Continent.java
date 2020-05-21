@@ -21,4 +21,7 @@ public class Continent {
     public String getNameOfContinent() {
         return nameOfContinent;
     }
+
+    public void addCountry(Country country) {
+    }
 }
