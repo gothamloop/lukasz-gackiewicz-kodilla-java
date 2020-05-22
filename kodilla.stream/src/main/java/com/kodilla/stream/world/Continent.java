@@ -23,5 +23,6 @@ public class Continent {
     }
 
     public void addCountry(Country country) {
+        listOfCountries.add(country);
     }
 }
