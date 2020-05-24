@@ -32,13 +32,13 @@ public class RpsRunner {
         System.out.println("Choose a button '1','2' or '3'");
         int button = myObj.nextInt();
         if(button == 1){
-            System.out.println("You chose a ROCK");
+            System.out.println("You chose ROCK");
         }
         if(button == 2){
-            System.out.println("You chose a PAPER");
+            System.out.println("You chose PAPER");
         }
         if(button == 3){
-            System.out.println("You chose a SCISSORS");
+            System.out.println("You chose SCISSORS");
         }
 
 
