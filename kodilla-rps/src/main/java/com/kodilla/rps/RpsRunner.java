@@ -29,8 +29,8 @@ public class RpsRunner {
         System.out.println("A button '1' - ROCK");
         System.out.println("A button '2' - PAPER");
         System.out.println("A button '3' - SCISSORS");
-        System.out.println("A button 'x' - Finish the game, Do you wanna stop playing?");
-        System.out.println("A button 'n' - Start the new game, Do you wanna stop playing?");
+     //   System.out.println("A button 'x' - Finish the game, Do you wanna stop playing?");
+     //   System.out.println("A button 'n' - Start the new game, Do you wanna stop playing?");
         System.out.println("Choose a button '1','2' or '3'");
         int button = myObj.nextInt();
         if(button == 1){
