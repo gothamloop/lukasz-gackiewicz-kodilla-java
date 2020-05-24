@@ -1,10 +1,12 @@
 package com.kodilla.rps;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class RpsRunner {
 
     public static void main(String[] args) {
+
 
         boolean end = false;
         Scanner myObj = new Scanner(System.in);
@@ -16,12 +18,12 @@ public class RpsRunner {
         String name = myObj.nextLine();
 
         // Numerical input
-        int round = myObj.nextInt();
+   //     int round = myObj.nextInt();
 
 
         // Output input by user
         System.out.println("Name: " + name);
-        System.out.println("You wanna play "  + round + " Round/s ");
+    //    System.out.println("You wanna play "  + round + " Round/s ");
 
         System.out.println("How to play?");
         System.out.println("A button '1' - ROCK");
@@ -40,6 +42,45 @@ public class RpsRunner {
         if(button == 3){
             System.out.println("You chose SCISSORS");
         }
+
+        int min = 1;
+        int max = 3;
+        int ran = (int)(Math.random() * (max - min + 1) + min);
+        if(ran == 1) {
+            System.out.println("Computer chose ROCK");
+        }
+        if(ran == 2) {
+            System.out.println("Computer chose PAPER");
+        }
+        if(ran == 3) {
+            System.out.println("Computer chose SCISSORS");
+        }
+
+        System.out.println("Who is better?");
+        if(button == 1 && ran == 1) {
+            System.out.println("It is a draw");
+        }
+        if(button == 1 && ran == 2) {
+            System.out.println("Computer won");
+        }
+        if(button == 1 && ran == 3) {
+            System.out.println("You won");
+        }
+        if(button == 2 && ran == 1) {
+            System.out.println("You won");
+        }
+        if(button == 3 && ran == 1) {
+            System.out.println("Computer won");
+        }
+        if(button == 2 && ran == 2) {
+            System.out.println("It is a draw");
+        }
+        if(button == 3 && ran == 3) {
+            System.out.println("It is a draw");
+        }
+
+
+
 
 
      //   while(!end) {}
