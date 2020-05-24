@@ -18,11 +18,31 @@ public class RpsRunner {
         // Numerical input
         int round = myObj.nextInt();
 
+
         // Output input by user
         System.out.println("Name: " + name);
         System.out.println("You wanna play "  + round + " Round/s ");
 
+        System.out.println("How to play?");
+        System.out.println("A button '1' - ROCK");
+        System.out.println("A button '2' - PAPER");
+        System.out.println("A button '3' - SCISSORS");
+        System.out.println("A button 'x' - Finish the game, Do you wanna stop playing?");
+        System.out.println("A button 'n' - Start the new game, Do you wanna stop playing?");
+        System.out.println("Choose a button '1','2' or '3'");
+        int button = myObj.nextInt();
+        if(button == 1){
+            System.out.println("You chose a ROCK");
+        }
+        if(button == 2){
+            System.out.println("You chose a PAPER");
+        }
+        if(button == 3){
+            System.out.println("You chose a SCISSORS");
+        }
 
+
+     //   while(!end) {}
 
 
 
