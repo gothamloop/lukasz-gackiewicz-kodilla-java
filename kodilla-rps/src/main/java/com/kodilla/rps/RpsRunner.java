@@ -39,8 +39,7 @@ public class RpsRunner {
         System.out.println("A button '1' - ROCK");
         System.out.println("A button '2' - PAPER");
         System.out.println("A button '3' - SCISSORS");
-     //   System.out.println("A button 'x' - Finish the game, Do you wanna stop playing?");
-     //   System.out.println("A button 'n' - Start the new game, Do you wanna stop playing?");
+
 
         int buttonUser = myObj.nextInt();
         if(buttonUser == 1){
@@ -130,6 +129,8 @@ public class RpsRunner {
         System.out.println("User points: " +userResult);
         System.out.println("Computer points: " +computerResult);
 
+
+
         if(userResult>computerResult){
             System.out.println("You win all game!");
         }
@@ -140,9 +141,11 @@ public class RpsRunner {
             System.out.println("Computer win all game :( ");
         }
 
+        // System.out.println("A button 'x' - Finish the game, Do you wanna stop playing?");
+        // System.out.println("A button 'n' - Start the new game, Do you wanna stop playing?");
 
+     //   while(!end) {
 
-     //   while(!end) {}
 
 
 
