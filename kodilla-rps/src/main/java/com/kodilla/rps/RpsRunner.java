@@ -40,7 +40,6 @@ public class RpsRunner {
                 System.out.println("A button '2' - PAPER");
                 System.out.println("A button '3' - SCISSORS");
 
-
                 int buttonUser = myObj.nextInt();
                 if (buttonUser == 1) {
                     System.out.println("You chose ROCK");
@@ -64,7 +63,6 @@ public class RpsRunner {
                 if (ranComputer == 3) {
                     System.out.println("Computer chose SCISSORS");
                 }
-
 
                 if (buttonUser == 1 && ranComputer == 1) {
                     System.out.println("It is a draw");
