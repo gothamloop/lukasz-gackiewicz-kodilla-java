@@ -72,13 +72,18 @@ public class RpsRunner {
         if(button == 3 && ran == 1) {
             System.out.println("Computer won");
         }
+        if(button == 3 && ran == 2) {
+            System.out.println("You won");
+        }
         if(button == 2 && ran == 2) {
             System.out.println("It is a draw");
         }
         if(button == 3 && ran == 3) {
             System.out.println("It is a draw");
         }
-
+        if(button == 2 && ran == 3) {
+            System.out.println("Computer won");
+        }
 
 
 
