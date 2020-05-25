@@ -32,56 +32,56 @@ public class RpsRunner {
      //   System.out.println("A button 'x' - Finish the game, Do you wanna stop playing?");
      //   System.out.println("A button 'n' - Start the new game, Do you wanna stop playing?");
         System.out.println("Choose a button '1','2' or '3'");
-        int button = myObj.nextInt();
-        if(button == 1){
+        int buttonUser = myObj.nextInt();
+        if(buttonUser == 1){
             System.out.println("You chose ROCK");
         }
-        if(button == 2){
+        if(buttonUser == 2){
             System.out.println("You chose PAPER");
         }
-        if(button == 3){
+        if(buttonUser == 3){
             System.out.println("You chose SCISSORS");
         }
 
         int min = 1;
         int max = 3;
-        int ran = (int)(Math.random() * (max - min + 1) + min);
-        if(ran == 1) {
+        int ranComputer = (int)(Math.random() * (max - min + 1) + min);
+        if(ranComputer == 1) {
             System.out.println("Computer chose ROCK");
         }
-        if(ran == 2) {
+        if(ranComputer == 2) {
             System.out.println("Computer chose PAPER");
         }
-        if(ran == 3) {
+        if(ranComputer == 3) {
             System.out.println("Computer chose SCISSORS");
         }
 
         System.out.println("Who is better?");
-        if(button == 1 && ran == 1) {
+        if(buttonUser == 1 && ranComputer == 1) {
             System.out.println("It is a draw");
         }
-        if(button == 1 && ran == 2) {
+        if(buttonUser == 1 && ranComputer == 2) {
             System.out.println("Computer won");
         }
-        if(button == 1 && ran == 3) {
+        if(buttonUser == 1 && ranComputer == 3) {
             System.out.println("You won");
         }
-        if(button == 2 && ran == 1) {
+        if(buttonUser == 2 && ranComputer == 1) {
             System.out.println("You won");
         }
-        if(button == 2 && ran == 2) {
+        if(buttonUser == 2 && ranComputer == 2) {
             System.out.println("It is a draw");
         }
-        if(button == 2 && ran == 3) {
+        if(buttonUser == 2 && ranComputer == 3) {
             System.out.println("You won");
         }
-        if(button == 3 && ran == 1) {
+        if(buttonUser == 3 && ranComputer == 1) {
             System.out.println("Computer won");
         }
-        if(button == 3 && ran == 2) {
+        if(buttonUser == 3 && ranComputer == 2) {
             System.out.println("You won");
         }
-        if(button == 3 && ran == 3) {
+        if(buttonUser == 3 && ranComputer == 3) {
             System.out.println("It is a draw");
         }
 
