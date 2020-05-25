@@ -12,18 +12,20 @@ public class RpsRunner {
         Scanner myObj = new Scanner(System.in);
 
         System.out.println("This is a game Rock, Paper, Scissors");
-        System.out.println("Enter your name, and how many rounds you wanna play:");
-
+        System.out.println("Please enter your name:");
         // String input
         String name = myObj.nextLine();
-
+        System.out.println("How many rounds do you wanna play?");
         // Numerical input
-   //     int round = myObj.nextInt();
+        int round = myObj.nextInt();
 
 
         // Output input by user
         System.out.println("Name: " + name);
-    //    System.out.println("You wanna play "  + round + " Round/s ");
+        System.out.println("You wanna play "  + round + " Round/s ");
+
+
+        do {
 
         System.out.println("How to play?");
         System.out.println("A button '1' - ROCK");
@@ -85,7 +87,8 @@ public class RpsRunner {
             System.out.println("It is a draw");
         }
 
-
+        round--;
+        } while (round>0);
 
 
      //   while(!end) {}
