@@ -7,6 +7,7 @@ import com.kodilla.rps.InfoLoop;
 
 public class RpsRunner {
 
+
     public static void main(String[] args) {
 
 
@@ -18,8 +19,8 @@ public class RpsRunner {
                 while (!end) {
 
 
-                    InfoLoop.printInfoLoop();
-
+                 InfoLoop.printInfoLoop();
+                   
           /*     Scanner myObj = new Scanner(System.in);
 
                 System.out.println("*** This is a game Rock, Paper, Scissors ***");
