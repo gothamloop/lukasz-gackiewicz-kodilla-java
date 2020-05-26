@@ -10,10 +10,41 @@ public class InfoForUsers {
     }
 
 
+  /*  static int printInfoComputerChose(int ranComputer) {
+        int min = 1;
+        int max = 3;
+        ranComputer = (int) (Math.random() * (max - min + 1) + min);
+        if (ranComputer == 1) {
+            System.out.println("Computer chose ROCK");
+        }
+        if (ranComputer == 2) {
+            System.out.println("Computer chose PAPER");
+        }
+        if (ranComputer == 3) {
+            System.out.println("Computer chose SCISSORS");
+        }
+        return ranComputer;
+    }
+*/
+
+
+
 
     static void printInfoPoints(int userResult, int computerResult) {
         System.out.println("User points: " + userResult);
         System.out.println("Computer points: " + computerResult);
+
+        if (userResult > computerResult) {
+            System.out.println("You win all game!");
+        }
+        if (userResult == computerResult) {
+            System.out.println("It is a draw!");
+        }
+        if (userResult < computerResult) {
+            System.out.println("Computer win all game :( ");
+        }
+
+
     }
 
 

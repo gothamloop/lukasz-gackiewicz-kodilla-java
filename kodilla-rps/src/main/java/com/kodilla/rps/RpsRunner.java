@@ -55,6 +55,7 @@ public class RpsRunner {
                         System.out.println("You chose SCISSORS");
                     }
 
+                    //InfoForUsers.printInfoComputerChose(ranComputer);
 
                     int min = 1;
                     int max = 3;
@@ -68,6 +69,7 @@ public class RpsRunner {
                     if (ranComputer == 3) {
                         System.out.println("Computer chose SCISSORS");
                     }
+
 
 
                     if (buttonUser == 1 && ranComputer == 1) {
@@ -131,18 +133,6 @@ public class RpsRunner {
 
 
                 InfoForUsers.printInfoPoints(userResult,computerResult);
-
-
-                if (userResult > computerResult) {
-                    System.out.println("You win all game!");
-                }
-                if (userResult == computerResult) {
-                    System.out.println("It is a draw!");
-                }
-                if (userResult < computerResult) {
-                    System.out.println("Computer win all game :( ");
-                }
-
 
                 InfoForUsers.printInfoFinishGame();
 
