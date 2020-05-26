@@ -136,9 +136,9 @@ public class RpsRunner {
 */
 
 
-                InfoForUsers.printInfoPoints(userResult,computerResult);
+                    InfoForUsers.printInfoPoints(userResult, computerResult);
 
-                InfoForUsers.printInfoFinishGame();
+                    InfoForUsers.printInfoFinishGame();
 
 
                 Scanner scan = new Scanner(System.in);
