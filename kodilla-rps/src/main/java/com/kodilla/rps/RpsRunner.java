@@ -2,6 +2,8 @@ package com.kodilla.rps;
 
 import java.util.Random;
 import java.util.Scanner;
+import com.kodilla.rps.InfoForUsers;
+
 
 public class RpsRunner {
 
@@ -37,10 +39,13 @@ public class RpsRunner {
 
                 do {
                     Scanner myObj2 = new Scanner(System.in);
+                    InfoForUsers.printInfo();
+  /*
                     System.out.println("Choose a button '1','2' or '3'");
                     System.out.println("A button '1' - ROCK");
                     System.out.println("A button '2' - PAPER");
                     System.out.println("A button '3' - SCISSORS");
+*/
 
                     int buttonUser = myObj2.nextInt();
                     if (buttonUser == 1) {
