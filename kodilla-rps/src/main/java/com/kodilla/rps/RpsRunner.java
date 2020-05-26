@@ -55,7 +55,7 @@ public class RpsRunner {
                         System.out.println("You chose SCISSORS");
                     }
 
-                    //InfoForUsers.printInfoComputerChose(ranComputer);
+
 
                     int min = 1;
                     int max = 3;
