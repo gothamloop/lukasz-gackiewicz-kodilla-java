@@ -1,5 +1,7 @@
 package com.kodilla.rps;
 
+import java.util.Scanner;
+
 public class InfoForUsers {
 
     static void printInfo1() {
@@ -32,10 +34,6 @@ public class InfoForUsers {
         System.out.println("A button 'n' - Start the new game, Do you wanna stop playing?");
         System.out.println("A button 'x' - Finish the game, Do you wanna stop playing?");
     }
-
-
-
-
 
 
 }

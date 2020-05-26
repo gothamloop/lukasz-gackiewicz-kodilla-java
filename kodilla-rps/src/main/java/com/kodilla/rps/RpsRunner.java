@@ -3,7 +3,7 @@ package com.kodilla.rps;
 import java.util.Random;
 import java.util.Scanner;
 import com.kodilla.rps.InfoForUsers;
-
+import com.kodilla.rps.InfoLoop;
 
 public class RpsRunner {
 
@@ -16,7 +16,11 @@ public class RpsRunner {
 
 
                 while (!end) {
-                Scanner myObj = new Scanner(System.in);
+
+
+                    InfoLoop.printInfoLoop();
+
+          /*     Scanner myObj = new Scanner(System.in);
 
                 System.out.println("*** This is a game Rock, Paper, Scissors ***");
                 System.out.println("Please enter your name:");
@@ -54,8 +58,6 @@ public class RpsRunner {
                     if (buttonUser == 3) {
                         System.out.println("You chose SCISSORS");
                     }
-
-
 
                     int min = 1;
                     int max = 3;
@@ -130,6 +132,7 @@ public class RpsRunner {
                     round--;
 
                 } while (round > 0);
+*/
 
 
                 InfoForUsers.printInfoPoints(userResult,computerResult);
