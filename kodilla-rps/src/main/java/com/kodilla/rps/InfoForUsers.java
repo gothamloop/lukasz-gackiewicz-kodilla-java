@@ -1,7 +1,5 @@
 package com.kodilla.rps;
 
-import java.util.Scanner;
-
 public class InfoForUsers {
 
     static void printInfo1() {
@@ -12,7 +10,7 @@ public class InfoForUsers {
     }
 
 
-     static void printInfoPoints(int userResult, int computerResult) {
+     static int printInfoPoints(int userResult, int computerResult) {
         System.out.println("User points: " + userResult);
         System.out.println("Computer points: " + computerResult);
 
@@ -26,7 +24,7 @@ public class InfoForUsers {
             System.out.println("Computer win all game :( ");
         }
 
-
+      return userResult;
     }
 
     static void printInfoFinishGame() {

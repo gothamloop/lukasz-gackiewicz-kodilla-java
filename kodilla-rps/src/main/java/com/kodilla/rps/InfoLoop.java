@@ -21,8 +21,6 @@ public class InfoLoop {
         System.out.println("Name: " + name);
         System.out.println("You play " + round + " Round/s ");
 
-
-
         int userPoints = 0;
         int computerPoints = 0;
         int userResult = 0;
