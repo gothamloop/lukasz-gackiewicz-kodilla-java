@@ -39,13 +39,10 @@ public class RpsRunner {
 
                 do {
                     Scanner myObj2 = new Scanner(System.in);
-                    InfoForUsers.printInfo();
-  /*
-                    System.out.println("Choose a button '1','2' or '3'");
-                    System.out.println("A button '1' - ROCK");
-                    System.out.println("A button '2' - PAPER");
-                    System.out.println("A button '3' - SCISSORS");
-*/
+
+
+                    InfoForUsers.printInfo1();
+
 
                     int buttonUser = myObj2.nextInt();
                     if (buttonUser == 1) {
@@ -57,6 +54,7 @@ public class RpsRunner {
                     if (buttonUser == 3) {
                         System.out.println("You chose SCISSORS");
                     }
+
 
                     int min = 1;
                     int max = 3;
@@ -70,6 +68,7 @@ public class RpsRunner {
                     if (ranComputer == 3) {
                         System.out.println("Computer chose SCISSORS");
                     }
+
 
                     if (buttonUser == 1 && ranComputer == 1) {
                         System.out.println("It is a draw");
@@ -130,8 +129,8 @@ public class RpsRunner {
 
                 } while (round > 0);
 
-                System.out.println("User points: " + userResult);
-                System.out.println("Computer points: " + computerResult);
+
+                InfoForUsers.printInfoPoints(userResult,computerResult);
 
 
                 if (userResult > computerResult) {
@@ -144,9 +143,10 @@ public class RpsRunner {
                     System.out.println("Computer win all game :( ");
                 }
 
-                System.out.println("Would you like to continue?");
-                System.out.println("A button 'n' - Start the new game, Do you wanna stop playing?");
-                System.out.println("A button 'x' - Finish the game, Do you wanna stop playing?");
+
+                InfoForUsers.printInfoFinishGame();
+
+
                 Scanner scan = new Scanner(System.in);
                 String s = scan.nextLine();
                 if (s.equals("x")) {
