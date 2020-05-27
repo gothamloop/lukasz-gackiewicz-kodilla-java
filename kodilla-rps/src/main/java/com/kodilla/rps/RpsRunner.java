@@ -17,7 +17,13 @@ public class RpsRunner {
                 String name = myObj.nextLine();
                 InfoForUsers.printInfo00();
                 // Numerical input
-                int round = myObj.nextInt();
+             //   int round = myObj.nextInt();
+                    while (!myObj.hasNextInt()) {
+                        System.out.println("Input is not a number.");
+                        myObj.nextLine();
+                    }
+                    int round = myObj.nextInt();
+
                 // Output input by user
                 System.out.println("Name: " + name);
                 System.out.println("You play " + round + " Round/s ");
@@ -31,7 +37,12 @@ public class RpsRunner {
                 do {
                     Scanner myObj2 = new Scanner(System.in);
                     InfoForUsers.printInfo1();
+                    while (!myObj2.hasNextInt()) {
+                        System.out.println("Input is not a number.");
+                        myObj2.nextLine();
+                    }
                     int buttonUser = myObj2.nextInt();
+
                     InfoForUsers.printInfo2(buttonUser);
 
                     int min = 1;
