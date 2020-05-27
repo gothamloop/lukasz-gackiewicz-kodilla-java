@@ -12,15 +12,12 @@ public class RpsRunner {
                 while (!end) {
 
                 Scanner myObj = new Scanner(System.in);
-
-                System.out.println("*** This is a game Rock, Paper, Scissors ***");
-                System.out.println("Please enter your name:");
+                InfoForUsers.printInfo0();
                 // String input
                 String name = myObj.nextLine();
-                System.out.println("How many rounds do you wanna play?");
+                InfoForUsers.printInfo00();
                 // Numerical input
                 int round = myObj.nextInt();
-
                 // Output input by user
                 System.out.println("Name: " + name);
                 System.out.println("You play " + round + " Round/s ");
@@ -33,19 +30,9 @@ public class RpsRunner {
 
                 do {
                     Scanner myObj2 = new Scanner(System.in);
-
                     InfoForUsers.printInfo1();
-
                     int buttonUser = myObj2.nextInt();
-                    if (buttonUser == 1) {
-                        System.out.println("You chose ROCK");
-                    }
-                    if (buttonUser == 2) {
-                        System.out.println("You chose PAPER");
-                    }
-                    if (buttonUser == 3) {
-                        System.out.println("You chose SCISSORS");
-                    }
+                    InfoForUsers.printInfo2(buttonUser);
 
                     int min = 1;
                     int max = 3;
@@ -114,11 +101,18 @@ public class RpsRunner {
                     InfoForUsers.printInfoPoints(userResult, computerResult);
                     InfoForUsers.printInfoFinishGame();
 
-                Scanner scan = new Scanner(System.in);
-                String s = scan.nextLine();
-                if (s.equals("x")) {
-                    end = true;
-                }
+                    Scanner scan = new Scanner(System.in);
+                    String s = scan.nextLine();
+
+                        if (s.equals("x")) {
+                            break;
+                        } else if (s.equals("n")) {
+                            continue;
+                        } else
+
+                            System.out.println(s.toUpperCase() + " is not a valid character. Proram will be closed.");
+                          break;
+
             }
         }
 }
