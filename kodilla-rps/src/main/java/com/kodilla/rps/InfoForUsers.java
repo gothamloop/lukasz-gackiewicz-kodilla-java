@@ -10,6 +10,11 @@ public class InfoForUsers {
     }
 
 
+
+
+
+
+
      static int printInfoPoints(int userResult, int computerResult) {
         System.out.println("User points: " + userResult);
         System.out.println("Computer points: " + computerResult);

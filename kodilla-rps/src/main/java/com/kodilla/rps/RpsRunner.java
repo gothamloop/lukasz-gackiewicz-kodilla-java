@@ -1,27 +1,17 @@
 package com.kodilla.rps;
 
-import java.util.Random;
 import java.util.Scanner;
-import com.kodilla.rps.InfoForUsers;
-import com.kodilla.rps.InfoLoop;
 
 public class RpsRunner {
 
 
     public static void main(String[] args) {
 
-
-            String again = null;
-
             boolean end = false;
-
 
                 while (!end) {
 
-
-                 InfoLoop.printInfoLoop();
-                   
-          /*     Scanner myObj = new Scanner(System.in);
+                Scanner myObj = new Scanner(System.in);
 
                 System.out.println("*** This is a game Rock, Paper, Scissors ***");
                 System.out.println("Please enter your name:");
@@ -41,13 +31,10 @@ public class RpsRunner {
                 int computerResult = 0;
                 System.out.println("How to play?");
 
-
                 do {
                     Scanner myObj2 = new Scanner(System.in);
 
-
                     InfoForUsers.printInfo1();
-
 
                     int buttonUser = myObj2.nextInt();
                     if (buttonUser == 1) {
@@ -63,6 +50,7 @@ public class RpsRunner {
                     int min = 1;
                     int max = 3;
                     int ranComputer = (int) (Math.random() * (max - min + 1) + min);
+
                     if (ranComputer == 1) {
                         System.out.println("Computer chose ROCK");
                     }
@@ -73,59 +61,48 @@ public class RpsRunner {
                         System.out.println("Computer chose SCISSORS");
                     }
 
-
-
                     if (buttonUser == 1 && ranComputer == 1) {
                         System.out.println("It is a draw");
-
                         userResult += userPoints + 1;
                         computerResult += computerPoints + 1;
                     }
                     if (buttonUser == 1 && ranComputer == 2) {
                         System.out.println("Paper beats Rock, Computer win");
-
                         computerResult += computerPoints + 1;
                     }
                     if (buttonUser == 1 && ranComputer == 3) {
                         System.out.println("Rock beats Scissors, You win");
-
                         userResult += userPoints + 1;
                     }
 
                     if (buttonUser == 2 && ranComputer == 1) {
                         System.out.println("Paper beats Rock, You win");
-
                         userResult += userPoints + 1;
                     }
 
                     if (buttonUser == 2 && ranComputer == 2) {
                         System.out.println("It is a draw");
-
                         userResult += userPoints + 1;
                         computerResult += computerPoints + 1;
                     }
 
                     if (buttonUser == 2 && ranComputer == 3) {
                         System.out.println("Scissors beats Paper, Computer win");
-
                         computerResult += computerPoints + 1;
                     }
 
                     if (buttonUser == 3 && ranComputer == 1) {
                         System.out.println("Rock beats Scissors, Computer win");
-
                         computerResult += computerPoints + 1;
                     }
 
                     if (buttonUser == 3 && ranComputer == 2) {
                         System.out.println("Scissors beats Paper, You win");
-
                         userResult += userPoints + 1;
                     }
 
                     if (buttonUser == 3 && ranComputer == 3) {
                         System.out.println("It is a draw");
-
                         userResult += userPoints + 1;
                         computerResult += computerPoints + 1;
                     }
@@ -133,13 +110,9 @@ public class RpsRunner {
                     round--;
 
                 } while (round > 0);
-*/
-
 
                     InfoForUsers.printInfoPoints(userResult, computerResult);
-
                     InfoForUsers.printInfoFinishGame();
-
 
                 Scanner scan = new Scanner(System.in);
                 String s = scan.nextLine();
@@ -147,9 +120,5 @@ public class RpsRunner {
                     end = true;
                 }
             }
-
         }
-
-
-
 }
