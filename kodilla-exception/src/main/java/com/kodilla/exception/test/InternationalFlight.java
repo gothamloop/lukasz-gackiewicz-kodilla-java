@@ -5,6 +5,16 @@ import java.util.Map;
 
 public class InternationalFlight {
 
+
+
+    public static void findFlight(Flight flight){
+
+
+    }
+
+
+
+
     private Map <String, Boolean> airportList() {
         Map <String, Boolean> airportList = new HashMap<String, Boolean>();
         airportList.put("WARSAW", true);
