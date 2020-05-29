@@ -16,7 +16,9 @@ public class InternationalFlight {
 
         for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
             System.out.println(flights.getKey() + "/" + flights.getValue());
-            throw new RouteNotFoundException();
+            if(flights.getValue() == false){
+                System.out.println("You can't flight there");
+            }
         }
     }
 }
