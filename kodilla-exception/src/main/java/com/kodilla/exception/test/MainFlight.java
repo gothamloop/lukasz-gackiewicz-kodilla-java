@@ -10,11 +10,11 @@ public class MainFlight {
 
         try
         {
-            InternationalFlight.findFlight(new Flight("WARSAW", "LODZ"));
+            InternationalFlight.findFlight(new Flight("WARSAW", "DUBLIN"));
         }
         catch (RouteNotFoundException e)
         {
-            System.out.println("What happened");
+            System.out.println("What happened - something wrong");
         }
         finally
         {

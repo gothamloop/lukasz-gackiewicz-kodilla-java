@@ -18,7 +18,8 @@ public class InternationalFlight {
             System.out.println(flights.getKey() + "/" + flights.getValue());
             if(flights.getValue() == false){
                 System.out.println("You can't flight there");
+
             }
-        }
+        }throw new RouteNotFoundException();
     }
 }
