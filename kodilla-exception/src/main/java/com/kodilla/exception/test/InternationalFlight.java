@@ -7,27 +7,15 @@ public class InternationalFlight {
 
 
 
-    public static void findFlight(Flight flight) throws RouteNotFoundException{
+    public static void findFlight(Flight flight) throws RouteNotFoundException {
 
-    }
-
-
-    private Map <String, Boolean> airportList() {
-        Map <String, Boolean> airportList = new HashMap<String, Boolean>();
+        Map<String, Boolean> airportList = new HashMap<String, Boolean>();
         airportList.put("WARSAW", true);
         airportList.put("LODZ", true);
         airportList.put("BERLIN", true);
         airportList.put("DUBLIN", false);
         airportList.put("LONDON", false);
 
-        return airportList;
-   }
 
-
-
-
-
-
-
-
+    }
 }
