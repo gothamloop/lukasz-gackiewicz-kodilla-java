@@ -14,7 +14,7 @@ public class MainFlight {
         }
         catch (RouteNotFoundException e)
         {
-            System.out.println("What happened - something wrong");
+            System.out.println("Something wrong with your flight");
         }
         finally
         {
