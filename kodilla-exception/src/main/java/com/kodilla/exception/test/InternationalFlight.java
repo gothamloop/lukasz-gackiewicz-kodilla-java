@@ -7,12 +7,9 @@ public class InternationalFlight {
 
 
 
-    public static void findFlight(Flight flight){
-
+    public static void findFlight(Flight flight) throws RouteNotFoundException{
 
     }
-
-
 
 
     private Map <String, Boolean> airportList() {
