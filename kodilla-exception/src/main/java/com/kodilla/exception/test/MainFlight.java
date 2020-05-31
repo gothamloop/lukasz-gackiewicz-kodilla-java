@@ -6,6 +6,12 @@ public class MainFlight {
 
     public static void main(String args[]) {
 
+        Flight oneFlight = new Flight("WARSAW", "LODZ");
+        Flight twoFlight = new Flight("WARSAW", "BERLIN");
+        Flight threeFlight = new Flight("WARSAW", "DUBLIN");
+        Flight fourFlight = new Flight("WARSAW", "LONDON");
+        Flight fiveFlight = new Flight("WARSAW", "LODZ");
+
         InternationalFlight flightFinder = new InternationalFlight();
 
         try
