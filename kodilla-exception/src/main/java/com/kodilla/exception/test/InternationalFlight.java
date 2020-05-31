@@ -15,7 +15,8 @@ public class InternationalFlight {
         airportList.put("DUBLIN", false);
         airportList.put("LONDON", false);
 
-        //  System.out.println("Initial Mappings are: " + airportList);
+
+               //  System.out.println("Initial Mappings are: " + airportList);
         //  System.out.println("The Value is: " + airportList.get("WARSAW"));
         System.out.println("The set is: " + airportList.entrySet());
         //  System.out.println("The set is: " + airportList.keySet());
@@ -23,8 +24,8 @@ public class InternationalFlight {
         for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
             if(flights.getKey() != flight.getArrivalAirport()) {
                 System.out.println("You can't flight there");
+                System.out.println(flight.getArrivalAirport());
                 throw new RouteNotFoundException();
-
             }}
 /*
         for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
