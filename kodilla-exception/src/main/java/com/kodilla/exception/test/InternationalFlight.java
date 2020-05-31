@@ -15,12 +15,21 @@ public class InternationalFlight {
         airportList.put("DUBLIN", false);
         airportList.put("LONDON", false);
 
-        for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
+
+        System.out.println("Initial Mappings are: " + airportList);
+        System.out.println("The Value is: " + airportList.get("WARSAW"));
+
+
+
+/*        for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
           if(flights.getValue() == false){
               System.out.println(flights.getKey() + "/" + flights.getValue());
                 System.out.println("You can't flight there");
                throw new RouteNotFoundException();
             }
+            }
+*/
         }
+
     }
-}
+
