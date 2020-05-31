@@ -10,7 +10,7 @@ public class MainFlight {
         Flight twoFlight = new Flight("WARSAW", "BERLIN");
         Flight threeFlight = new Flight("WARSAW", "DUBLIN");
         Flight fourFlight = new Flight("WARSAW", "LONDON");
-        Flight fiveFlight = new Flight("WARSAW", "LODZ");
+        Flight fiveFlight = new Flight("LODZ", "WARSAW");
 
         InternationalFlight flightFinder = new InternationalFlight();
 
