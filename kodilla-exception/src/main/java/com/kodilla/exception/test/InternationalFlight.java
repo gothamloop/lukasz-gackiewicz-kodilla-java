@@ -1,5 +1,6 @@
 package com.kodilla.exception.test;
 
+import com.kodilla.exception.test.Flight;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,10 +16,11 @@ public class InternationalFlight {
         airportList.put("LONDON", false);
 
         for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
-            System.out.println(flights.getKey() + "/" + flights.getValue());
-            if(flights.getValue() == false){
+          System.out.println(flights.getKey() + "/" + flights.getValue());
+           if(flights.getValue() == false){
                 System.out.println("You can't flight there");
+               throw new RouteNotFoundException();
             }
-        }throw new RouteNotFoundException();
+        }
     }
 }

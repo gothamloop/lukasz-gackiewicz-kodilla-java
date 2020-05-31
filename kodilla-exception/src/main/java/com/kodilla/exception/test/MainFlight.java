@@ -20,7 +20,5 @@ public class MainFlight {
         {
             System.out.println("Please check again");
         }
-
     }
-
 }
