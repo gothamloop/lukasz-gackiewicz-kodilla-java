@@ -15,21 +15,27 @@ public class InternationalFlight {
         airportList.put("DUBLIN", false);
         airportList.put("LONDON", false);
 
-
-      //  System.out.println("Initial Mappings are: " + airportList);
-      //  System.out.println("The Value is: " + airportList.get("WARSAW"));
+        //  System.out.println("Initial Mappings are: " + airportList);
+        //  System.out.println("The Value is: " + airportList.get("WARSAW"));
         System.out.println("The set is: " + airportList.entrySet());
-      //  System.out.println("The set is: " + airportList.keySet());
+        //  System.out.println("The set is: " + airportList.keySet());
 
-        for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
+       if (airportList.get("DUBLIN") == false) {
+
+                 System.out.println("This flight is not possible");
+                throw new RouteNotFoundException();
+            }
+
+       /* for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
           if(flights.getValue() == false){
               System.out.println(flights.getKey() + "/" + flights.getValue());
+
                 System.out.println("You can't flight there");
                throw new RouteNotFoundException();
+          //  }
             }
-            }
+*/
 
 
-
+        }
     }
-}
