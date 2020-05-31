@@ -20,11 +20,31 @@ public class InternationalFlight {
         System.out.println("The set is: " + airportList.entrySet());
         //  System.out.println("The set is: " + airportList.keySet());
 
-       if (airportList.get("DUBLIN") == false) {
+        for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
+            if(flights.getKey() != flight.getArrivalAirport()) {
+                System.out.println("You can't flight there");
+                throw new RouteNotFoundException();
 
+            }}
+/*
+        for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
+            if(flights.getKey() == flight.getArrivalAirport()){
+                System.out.println(flights.getKey() + "/" + flights.getValue());
+
+                System.out.println("You can't flight there");
+                throw new RouteNotFoundException();
+                //  }
+            }
+
+*/
+
+
+     /*  if (airportList.get("DUBLIN") == false) {
                  System.out.println("This flight is not possible");
                 throw new RouteNotFoundException();
             }
+
+     */
 
        /* for (Map.Entry<String, Boolean> flights : airportList.entrySet()) {
           if(flights.getValue() == false){
