@@ -41,13 +41,11 @@ public class InternationalFlight {
 
 */
 
-
        if (airportList.get("DUBLIN") == false) {
            System.out.println(airportList.get("CHICAGO"));
+           System.out.println(airportList.get("DUBLIN"));
                  System.out.println("This flight is not possible");
                 throw new RouteNotFoundException();
-
-
             }
 
 
