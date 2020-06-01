@@ -15,8 +15,7 @@ public class InternationalFlight {
         airportList.put("DUBLIN", false);
         airportList.put("LONDON", false);
 
-
-               //  System.out.println("Initial Mappings are: " + airportList);
+        //  System.out.println("Initial Mappings are: " + airportList);
         //  System.out.println("The Value is: " + airportList.get("WARSAW"));
         System.out.println("The set is: " + airportList.entrySet());
         //  System.out.println("The set is: " + airportList.keySet());
@@ -39,14 +38,22 @@ public class InternationalFlight {
                 //  }
             }
 
-*/
-
        if (airportList.get("DUBLIN") == false) {
            System.out.println(airportList.get("CHICAGO"));
            System.out.println(airportList.get("DUBLIN"));
                  System.out.println("This flight is not possible");
                 throw new RouteNotFoundException();
             }
+    */
+
+
+
+            if (flight.getArrivalAirport() =="DUBLIN") {
+                System.out.println("You can't flight from this airport.");
+                throw new RouteNotFoundException();
+            }
+        }
+
 
 
 
@@ -62,4 +69,4 @@ public class InternationalFlight {
 
 
         }
-    }
+
