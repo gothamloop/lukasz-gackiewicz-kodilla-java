@@ -1,5 +1,7 @@
 package com.kodilla.good.patterns.challenges;
 
+import javafx.beans.binding.MapExpression;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,7 +9,7 @@ import java.util.Map;
 
 class MovieStore {
 
-    public Map<String, List<String>> getMovies() {
+     public static Map<String, List<String>> getMovies() {
 
         List<String> ironManTranslations = new ArrayList<>();
         ironManTranslations.add("Żelazny Człowiek");
@@ -28,14 +30,16 @@ class MovieStore {
 
         return booksTitlesWithTranslations;
     }
+
 }
+
 
 class ShowAllFilms {
     public static void main(String[] args) {
 
 
         System.out.println("Showing all films:");
-
+        System.out.println(MovieStore.getMovies());
 
         }
     }
