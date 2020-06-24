@@ -11,7 +11,7 @@ class ShowAllFilms {
 
         String allMovies = MovieStore.getMovies().entrySet()
                 .stream()
-                .flatMap(entry -> entry.getValue().stream())
+                .flatMap(s -> s.getValue().stream())
                 .collect(Collectors.joining(" ! "));
         System.out.println(allMovies);
     }
