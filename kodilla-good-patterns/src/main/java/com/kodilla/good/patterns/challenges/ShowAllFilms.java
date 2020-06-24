@@ -8,6 +8,7 @@ class ShowAllFilms {
         //   System.out.println(MovieStore.getMovies());
         //   MovieStore.getMovies().entrySet().forEach(System.out::println);
         //   MovieStore.getMovies().entrySet().stream().forEach(e-> System.out.println(e));
+
         String allMovies = MovieStore.getMovies().entrySet()
                 .stream()
                 .flatMap(entry -> entry.getValue().stream())
