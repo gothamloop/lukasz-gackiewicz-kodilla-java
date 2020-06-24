@@ -44,6 +44,7 @@ class ShowAllFilms {
    //   MovieStore.getMovies().entrySet().stream().forEach(e-> System.out.println(e));
         MovieStore.getMovies().entrySet()
                 .stream()
-                .forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue().stream().collect(Collectors.joining(" ! "))));
+                .forEach(entry -> System.out.println(entry.getKey() + " "
+                        + entry.getValue().stream().collect(Collectors.joining(" ! "))));
         }
     }
