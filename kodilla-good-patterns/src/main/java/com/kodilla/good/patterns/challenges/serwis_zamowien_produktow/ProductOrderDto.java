@@ -1,15 +1,15 @@
 package com.kodilla.good.patterns.challenges.serwis_zamowien_produktow;
 
 public class ProductOrderDto {
-    public User user;
+    public UserOrder userOrder;
     public boolean isRented;
 
-    public ProductOrderDto(final User user, final boolean isRented){
-        this.user = user;
+    public ProductOrderDto(final UserOrder userOrder, final boolean isRented){
+        this.userOrder = userOrder;
         this.isRented= isRented;
     }
 
-    public User getUser() {return user;}
+    public UserOrder getUser() {return userOrder;}
     public boolean isRented() {return isRented; }
 
 }
