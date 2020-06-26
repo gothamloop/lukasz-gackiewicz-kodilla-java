@@ -7,11 +7,11 @@ public class ProductOrderProcessor {
         private ProductOrderRepository productOrderRepository;
 
         public ProductOrderProcessor(final InformationService informationService,
-                                     final RentalService rentalService,
-                                     final RentalRepository rentalRepository) {
+                                     final ProductOrderService productOrderService,
+                                     final ProductOrderRepository productOrderRepository) {
             this.informationService = informationService;
-            this.rentalService = rentalService;
-            this.rentalRepository = rentalRepository;
+            this.productOrderService = productOrderService;
+            this.productOrderRepository = productOrderRepository;
         }
 
         public RentalDto process(final RentRequest rentRequest) {
