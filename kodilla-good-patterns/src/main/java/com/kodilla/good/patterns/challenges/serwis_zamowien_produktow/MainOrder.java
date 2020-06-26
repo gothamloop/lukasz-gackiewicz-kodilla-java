@@ -4,11 +4,11 @@ public class MainOrder {
 
     public static void main(String[] args) {
 
-    RentRequestRetriever rentRequestRetriever = new RentRequestRetriever();
-    RentRequest rentRequest = rentRequestRetriever.retrive();
+    ProductOrderRequestRetriever productOrderRequestRetriever = new ProductOrderRequestRetriever();
+    ProductOrderRequest productOrderRequest = productOrderRequest.retrive();
 
-    RentalProcessor rentalProcessor = new RentalProcessor(
-            new MailService(), new CarRentalService(), new CarRentalRepository());
-    rentalProcessor.process(user,rentFrom,rentTo);
+    ProductOrderProcessor productOrderProcessor = new ProductOrderProcessor(
+               new MailService(), new CarRentalService(), new CarRentalRepository());
+        productOrderProcessor.process(userOrder,rentFrom,rentTo);
    }
 }
