@@ -14,16 +14,16 @@ public class ProductOrderProcessor {
             this.productOrderRepository = productOrderRepository;
         }
 
-        public ProductOrderDto process(final RentRequest rentRequest) {
-            boolean isRented = productOrderService.rent(rentRequest.getUser(), rentRequest.getFrom(),
-                    rentRequest.getTo());
+        public ProductOrderDto process(final ProductOrderRequest productOrderRequest) {
+            boolean isRented = productOrderService.rent(productOrderRequest.getUserOrder(), productOrderRequest.getFrom(),
+                    productOrderRequest.getTo());
 
             if(isRented) {
-                informationService.inform(rentRequest.getUser());
-                productOrderRepository.createRental(rentRequest.getUser(), rentRequest.getFrom(), rentRequest.getTo());
-                return new ProductOrderDto(rentRequest.getUser(), true);
+                informationService.inform(productOrderRequest.getUserOrder());
+                productOrderRepository.createRental(ProductOrderRequest.getUserOrder(), ProductOrderRequest.getFrom(), ProductOrderRequest.getTo());
+                return new ProductOrderDto(ProductOrderRequest.getUserOrder(), true);
             } else {
-                return new ProductOrderDto(rentRequest.getUser(), false);
+                return new ProductOrderDto(ProductOrderRequest.getUserOrder(), false);
             }
         }
     }

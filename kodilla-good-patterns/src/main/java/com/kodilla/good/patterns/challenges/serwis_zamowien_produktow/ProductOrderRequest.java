@@ -4,17 +4,17 @@ import java.time.LocalDateTime;
 
 public class ProductOrderRequest {
 
-    private User user;
+    private UserOrder userOrder;
     private LocalDateTime from;
     private LocalDateTime to;
 
-    public ProductOrderRequest(final User user, final LocalDateTime from, final LocalDateTime to) {
-        this.user = user;
+    public ProductOrderRequest(final UserOrder userOrder, final LocalDateTime from, final LocalDateTime to) {
+        this.userOrder = userOrder;
         this.from = from;
         this.to = to;
     }
 
-public User getUser() {return user; }
+public UserOrder getUserOrder() {return userOrder; }
 
     public LocalDateTime getFrom() {
         return from;
