@@ -3,8 +3,8 @@ package com.kodilla.good.patterns.challenges.serwis_zamowien_produktow;
 public class ProductOrderProcessor {
 
         private InformationService informationService;
-        private RentalService rentalService;
-        private RentalRepository rentalRepository;
+        private ProductOrderService productOrderService;
+        private ProductOrderRepository productOrderRepository;
 
         public ProductOrderProcessor(final InformationService informationService,
                                      final RentalService rentalService,
