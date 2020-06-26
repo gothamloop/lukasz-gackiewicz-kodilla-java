@@ -9,6 +9,6 @@ public class MainOrder {
 
     ProductOrderProcessor productOrderProcessor = new ProductOrderProcessor(
                new MailService(), new CarRentalService(), new CarRentalRepository());
-        productOrderProcessor.process(userOrder,rentFrom,rentTo);
+        productOrderProcessor.process(productOrderRequest);
    }
 }
