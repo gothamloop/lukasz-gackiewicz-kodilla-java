@@ -20,7 +20,7 @@ public class ProductOrderProcessor {
 
             if(isRented) {
                 informationService.inform(productOrderRequest.getUserOrder());
-                productOrderRepository.createRental(ProductOrderRequest.getUserOrder(), ProductOrderRequest.getFrom(), ProductOrderRequest.getTo());
+                productOrderRepository.createProductOrder(ProductOrderRequest.getUserOrder(), ProductOrderRequest.getFrom(), ProductOrderRequest.getTo());
                 return new ProductOrderDto(ProductOrderRequest.getUserOrder(), true);
             } else {
                 return new ProductOrderDto(ProductOrderRequest.getUserOrder(), false);
@@ -28,6 +28,3 @@ public class ProductOrderProcessor {
         }
     }
 
-
-
-}

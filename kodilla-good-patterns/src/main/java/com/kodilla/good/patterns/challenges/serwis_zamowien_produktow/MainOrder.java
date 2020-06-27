@@ -8,7 +8,7 @@ public class MainOrder {
     ProductOrderRequest productOrderRequest = productOrderRequestRetriever.retrive();
 
     ProductOrderProcessor productOrderProcessor = new ProductOrderProcessor(
-               new MailService(), new CarRentalService(), new CarRentalRepository());
+               new MailService(), new ComputerOrderService(), new ComputerOrderRepository());
         productOrderProcessor.process(productOrderRequest);
    }
 }
