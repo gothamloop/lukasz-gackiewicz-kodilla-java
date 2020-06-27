@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class ComputerOrderService implements ProductOrderService{
 
     @Override
-    public boolean rent(UserOrder userOrder) {
+    public boolean buy(UserOrder userOrder) {
         return false;
     }
 }

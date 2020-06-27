@@ -15,9 +15,9 @@ public class ProductOrderProcessor {
         }
 
         public ProductOrderDto process(final ProductOrderRequest productOrderRequest) {
-            boolean isRented = productOrderService.rent(productOrderRequest.getUserOrder());
+            boolean isBuy = productOrderService.buy(productOrderRequest.getUserOrder());
 
-            if(isRented) {
+            if(isBuy) {
                 informationService.inform(productOrderRequest.getUserOrder());
                 productOrderRepository.createProductOrder(ProductOrderRequest.getUserOrder());
                 return new ProductOrderDto(ProductOrderRequest.getUserOrder(), true);
