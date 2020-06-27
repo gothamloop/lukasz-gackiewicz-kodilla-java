@@ -10,7 +10,6 @@ public class ProductOrderRequestRetriever {
         LocalDateTime orderDate = LocalDateTime.of(2020, 6, 27, 16, 45);
         ProductOrder productOrder = new ProductOrder("Intel Core i7");
 
-        //System.out.println("User: " + userOrder.getUserName());
 
         System.out.println("User: " + UserOrder.getFirstName() + " " + UserOrder.getLastName());
         return new ProductOrderRequest(userOrder, productOrder, orderDate);
