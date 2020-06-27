@@ -5,7 +5,7 @@ public class MainOrder {
     public static void main(String[] args) {
 
     ProductOrderRequestRetriever productOrderRequestRetriever = new ProductOrderRequestRetriever();
-    ProductOrderRequest productOrderRequest = productOrderRequestRetriever.retrive();
+    ProductOrderRequest productOrderRequest = productOrderRequestRetriever.retrieve();
 
     ProductOrderProcessor productOrderProcessor = new ProductOrderProcessor(
                new MailService(), new ComputerOrderService(), new ComputerOrderRepository());
