@@ -15,12 +15,11 @@ public class ProductOrderProcessor {
         }
 
         public ProductOrderDto process(final ProductOrderRequest productOrderRequest) {
-            boolean isRented = productOrderService.rent(productOrderRequest.getUserOrder(), productOrderRequest.getFrom(),
-                    productOrderRequest.getTo());
+            boolean isRented = productOrderService.rent(productOrderRequest.getUserOrder());
 
             if(isRented) {
                 informationService.inform(productOrderRequest.getUserOrder());
-                productOrderRepository.createProductOrder(ProductOrderRequest.getUserOrder(), ProductOrderRequest.getFrom(), ProductOrderRequest.getTo());
+                productOrderRepository.createProductOrder(ProductOrderRequest.getUserOrder());
                 return new ProductOrderDto(ProductOrderRequest.getUserOrder(), true);
             } else {
                 return new ProductOrderDto(ProductOrderRequest.getUserOrder(), false);
