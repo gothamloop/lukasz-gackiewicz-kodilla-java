@@ -11,7 +11,8 @@ public class ProductOrderRequestRetriever {
         ProductOrder productOrder = new ProductOrder("Intel Core i7");
 
 
-        System.out.println("User: " + UserOrder.getFirstName() + " " + UserOrder.getLastName());
+        System.out.println("User Order: " + UserOrder.getFirstName() + " " + UserOrder.getLastName());
+        System.out.println("Product Order: " + productOrder);
         return new ProductOrderRequest(userOrder, productOrder, orderDate);
     }
 }

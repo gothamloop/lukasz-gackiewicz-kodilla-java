@@ -6,4 +6,12 @@ public class ProductOrder {
    public ProductOrder(String productName) {
         this.productName = productName;
     }
+
+    @Override
+    public String toString() {
+        return  productName;
+    }
+
+
+
 }
