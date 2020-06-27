@@ -12,7 +12,7 @@ public class ProductOrderRequestRetriever {
 
 
         System.out.println("User Order: " + UserOrder.getFirstName() + " " + UserOrder.getLastName());
-        System.out.println("Time of Order: " + orderDate );
+        System.out.println("Time of Order: " + orderDate);
         System.out.println("Product Order: " + productOrder);
         return new ProductOrderRequest(userOrder, productOrder, orderDate);
     }
