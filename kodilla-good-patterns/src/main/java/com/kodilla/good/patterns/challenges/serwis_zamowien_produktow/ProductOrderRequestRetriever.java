@@ -1,8 +1,5 @@
 package com.kodilla.good.patterns.challenges.serwis_zamowien_produktow;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.w3c.dom.ls.LSOutput;
-
 import java.time.LocalDateTime;
 
 public class ProductOrderRequestRetriever {
@@ -13,7 +10,9 @@ public class ProductOrderRequestRetriever {
         LocalDateTime orderDate = LocalDateTime.of(2020, 6, 27, 16, 45);
         ProductOrder productOrder = new ProductOrder("Intel Core i7");
 
-        //System.out.println("testing retrieve "+ userOrder);
+        //System.out.println("User: " + userOrder.getUserName());
+
+        System.out.println("User: " + UserOrder.getFirstName() + UserOrder.getLastName());
         return new ProductOrderRequest(userOrder, productOrder, orderDate);
     }
 }

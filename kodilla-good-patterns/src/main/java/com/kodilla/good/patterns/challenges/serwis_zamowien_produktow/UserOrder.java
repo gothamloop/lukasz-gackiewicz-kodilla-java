@@ -10,11 +10,11 @@ public class UserOrder {
             this.lastName = lastName;
         }
 
-        public String getUserName() {
+        public String getFirstName() {
             return firstName;
         }
 
-        public String getRealName() {
+        public String getLastName() {
             return lastName;
         }
 }
