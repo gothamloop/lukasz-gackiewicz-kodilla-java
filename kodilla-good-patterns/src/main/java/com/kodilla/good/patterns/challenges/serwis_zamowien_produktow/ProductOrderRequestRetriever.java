@@ -8,6 +8,8 @@ public class ProductOrderRequestRetriever {
 
         UserOrder userOrder = new UserOrder ("John", "Wekl");
 
+        System.out.println("testing retrieve "+ userOrder);
         return new ProductOrderRequest(userOrder);
+
     }
 }
