@@ -8,7 +8,7 @@ public class ProductOrderRequestRetriever {
 
         UserOrder userOrder = new UserOrder ("John", "Wekl");
         LocalDateTime orderDate = LocalDateTime.of(2020, 6, 27, 16, 45);
-        ProductOrder productOrder = new ProductOrder("Intel Core i7");
+        ProductOrder productOrder = new ProductOrder("Intel Core i9");
 
 
         System.out.println("User Order: " + UserOrder.getFirstName() + " " + UserOrder.getLastName());
