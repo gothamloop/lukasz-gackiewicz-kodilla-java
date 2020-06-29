@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class ProductOrderRequest {
 
-    private static UserOrder userOrder;
+    private UserOrder userOrder;
     private ProductOrder productOrder;
     private LocalDateTime orderDate;
 
@@ -14,7 +14,7 @@ public class ProductOrderRequest {
         this.orderDate = orderDate;
     }
 
-public static UserOrder getUserOrder() { return userOrder; }
+public UserOrder getUserOrder() { return userOrder; }
 public ProductOrder getProductOrder() { return productOrder; }
 public LocalDateTime getOrderDate() { return orderDate; }
 

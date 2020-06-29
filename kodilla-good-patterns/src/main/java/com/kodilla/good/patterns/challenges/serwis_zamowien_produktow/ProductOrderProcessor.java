@@ -19,10 +19,10 @@ public class ProductOrderProcessor {
 
             if(isBuy) {
                 informationService.inform(productOrderRequest.getUserOrder());
-                productOrderRepository.createProductOrder(ProductOrderRequest.getUserOrder());
-                return new ProductOrderDto(ProductOrderRequest.getUserOrder(), true);
+                productOrderRepository.createProductOrder(productOrderRequest.getUserOrder());
+                return new ProductOrderDto(productOrderRequest.getUserOrder(), true);
             } else {
-                return new ProductOrderDto(ProductOrderRequest.getUserOrder(), false);
+                return new ProductOrderDto(productOrderRequest.getUserOrder(), false);
             }
         }
     }
