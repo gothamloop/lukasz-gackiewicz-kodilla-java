@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.1.17.RELEASE'
+        springBootVersion = '2.2.6.RELEASE'   // 2.1.17.RELEASE nie działa gradlew build
     }
     repositories {
         mavenCentral()
