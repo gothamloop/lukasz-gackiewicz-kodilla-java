@@ -4,7 +4,7 @@ public class UserOrder {
     private static String name;
 
 
-    public UserOrder (String firstName, String lastName) {
+    public UserOrder (String firstName) {
         this.name = name;
     }
 
