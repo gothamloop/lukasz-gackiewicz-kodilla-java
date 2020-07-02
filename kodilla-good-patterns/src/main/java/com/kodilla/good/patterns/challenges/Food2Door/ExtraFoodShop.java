@@ -4,7 +4,7 @@ public class ExtraFoodShop implements ShopInterf {
 
 
     @Override
-    public boolean process() {
+    public boolean process(UserOrder userOrder, Product product) {
         return false;
     }
 }

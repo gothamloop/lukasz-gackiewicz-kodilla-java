@@ -2,6 +2,6 @@ package com.kodilla.good.patterns.challenges.Food2Door;
 
 public interface ShopInterf {
 
-    boolean process();
+    boolean process(UserOrder userOrder, Product product);
 
 }
