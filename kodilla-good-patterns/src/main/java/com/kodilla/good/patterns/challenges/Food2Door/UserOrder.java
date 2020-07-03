@@ -1,15 +1,19 @@
 package com.kodilla.good.patterns.challenges.Food2Door;
 
 public class UserOrder {
-    private static String name;
+    private static String firstName;
+    private static String lastName;
 
-
-    public UserOrder (String firstName) {
-        this.name = name;
+    public UserOrder (String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public static String getFirstName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
+    }
+    public String getLastName() {
+        return lastName;
     }
 
 }
