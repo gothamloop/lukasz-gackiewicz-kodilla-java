@@ -13,26 +13,27 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class BoardTestSuite {
     @Test
     public void testTaskAdd() {
+
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext(BoardConfig.class);
         Board board = context.getBean(Board.class);
 
         //When
-        String taskToDo = "taskToDo";
+        String taskToDo = "testing taskToDo";
 
-        String taskInProgress = "taskInProgress";
+        String taskInProgress = "testing taskInProgress";
 
-        String taskDone = "taskDone";
+        String taskDone = "testing taskDone";
 
         board.getToDoList().addTask(taskToDo);
         board.getInProgressList().addTask(taskInProgress);
         board.getDoneList().addTask(taskDone);
 
         //Then
-        Assert.assertEquals("taskToDo", board.getToDoList().getTasks().get(0));
+        Assert.assertEquals("testing taskToDo", board.getToDoList().getTasks().get(0));
 
-        Assert.assertEquals("taskInProgress", board.getInProgressList().getTasks().get(0));
+        Assert.assertEquals("testing taskInProgress", board.getInProgressList().getTasks().get(0));
 
-        Assert.assertEquals("taskDone", board.getDoneList().getTasks().get(0));
+        Assert.assertEquals("testing taskDone", board.getDoneList().getTasks().get(0));
     }
 }
