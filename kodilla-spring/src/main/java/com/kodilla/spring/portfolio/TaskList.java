@@ -15,4 +15,7 @@ public class TaskList {
         return tasks;
     }
 
+    public boolean addTask(String taskDescription){
+        return tasks.add(taskDescription);
+    }
 }
