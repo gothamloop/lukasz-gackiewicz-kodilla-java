@@ -17,4 +17,6 @@ public class OrderRequest {
         return userOrder;
     }
 
+    public ItemOrder getItemOrder() { return itemOrder; }
+
 }
