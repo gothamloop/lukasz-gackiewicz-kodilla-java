@@ -36,6 +36,7 @@ public class LibraryTestSuite {
 
         //When
         library.getBooks().remove(book_1);
+
         //Then
         System.out.println(library);
         System.out.println(clonedLibrary);
