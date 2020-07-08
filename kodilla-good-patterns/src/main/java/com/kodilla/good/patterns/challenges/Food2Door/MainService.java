@@ -8,6 +8,6 @@ public class MainService {
             OrderRequestRetriver orderRequestRetriver = new OrderRequestRetriver();
             OrderRequest orderRequest = orderRequestRetriver.retrive();
 
-            OrderProcess.process(new GlutenFreeShop, new OrderRequestRetriver().retrive());
+            OrderProcess.process(new GlutenFreeShop(), orderRequestRetriver.retrive());
         }
     }
