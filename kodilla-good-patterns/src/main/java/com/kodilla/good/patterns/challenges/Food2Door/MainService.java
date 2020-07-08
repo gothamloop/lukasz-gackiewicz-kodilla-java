@@ -7,5 +7,9 @@ public class MainService {
             OrderRequest orderRequest = orderRequestRetriver.retrive();
 
             OrderProcess.process(new GlutenFreeShop(), orderRequestRetriver.retrive());
-        }
+
+            System.out.println("User of Order: " + UserOrder.getFirstName() + " " + UserOrder.getLastName());
+            System.out.println("Item of Order: " + ItemOrder.getName() + " " + ItemOrder.getQuantity() + " " + ItemOrder.getTypeOfProduct());
+            System.out.println("Time of Order: " + orderRequest.orderTime);
     }
+}

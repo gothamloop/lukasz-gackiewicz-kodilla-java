@@ -9,9 +9,9 @@ public class UserOrder {
         this.lastName = lastName;
     }
 
-    public String getFirstName() {
+    public static String getFirstName() {
         return firstName;
     }
-    public String getLastName() { return lastName;  }
+    public static String getLastName() { return lastName;  }
 
 }
