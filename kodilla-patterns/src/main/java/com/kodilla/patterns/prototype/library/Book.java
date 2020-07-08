@@ -7,10 +7,10 @@ public final class Book {
     final String author;
     final LocalDate publicationDate;
 
-    public Book(final String title, final String author, final LocalDate publicationDate) {
+    public Book(final String title, final String author, int yearOfPublication, int monthOfPublication, int dayOfPublication) {
         this.title = title;
         this.author = author;
-        this.publicationDate = publicationDate;
+        this.publicationDate = LocalDate.of(yearOfPublication,monthOfPublication,dayOfPublication);
     }
 
     public String getTitle() {
