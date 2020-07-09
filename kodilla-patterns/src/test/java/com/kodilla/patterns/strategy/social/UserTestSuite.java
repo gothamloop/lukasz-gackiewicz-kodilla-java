@@ -34,10 +34,10 @@ import org.junit.Test;
 
             //When
             String stevenIsUser = steven.sharePost();
-            System.out.println("Steven should: " + stevenIsUser);
+            System.out.println("Steven is a " + stevenIsUser);
             steven.setPublisher(new TwitterPublisher());
             stevenIsUser = steven.sharePost();
-            System.out.println("Steven now should: " + stevenIsUser);
+            System.out.println("Steven should be a " + stevenIsUser);
 
             //Then
             Assert.assertEquals("Twitter Publisher", stevenIsUser);
