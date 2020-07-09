@@ -19,7 +19,7 @@ public class User {
         return socialPublisher.share();
     }
 
-    public void setBuyingStrategy(SocialPublisher socialPublisher) {
+    public void setPublisher(SocialPublisher socialPublisher) {
         this.socialPublisher = socialPublisher;
     }
 

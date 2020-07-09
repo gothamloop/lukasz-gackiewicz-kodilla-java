@@ -14,17 +14,17 @@ import org.junit.Test;
             User kodilla = new ZGeneration("Kodilla");
 
             //When
-            String stevenShouldBuy = steven.sharePost();
-            System.out.println("Steven is a " + stevenShouldBuy);
-            String johnShouldBuy = john.sharePost();
-            System.out.println("John is a " + johnShouldBuy);
-            String kodillaShouldBuy = kodilla.sharePost();
-            System.out.println("Kodilla is a " + kodillaShouldBuy);
+            String stevenIsUser = steven.sharePost();
+            System.out.println("Steven is a " + stevenIsUser);
+            String johnIsUser = john.sharePost();
+            System.out.println("John is a " + johnIsUser);
+            String kodillaIsUser = kodilla.sharePost();
+            System.out.println("Kodilla is a " + kodillaIsUser);
 
             //Then
-            Assert.assertEquals("Facebook Publisher", stevenShouldBuy);
-            Assert.assertEquals("Snapchat Publisher", johnShouldBuy);
-            Assert.assertEquals("Twitter Publisher", kodillaShouldBuy);
+            Assert.assertEquals("Facebook Publisher", stevenIsUser);
+            Assert.assertEquals("Snapchat Publisher", johnIsUser);
+            Assert.assertEquals("Twitter Publisher", kodillaIsUser);
         }
 
         @Test
@@ -33,14 +33,14 @@ import org.junit.Test;
             User steven = new Millenials("Steven Links");
 
             //When
-            String stevenShouldBuy = steven.sharePost();
-            System.out.println("Steven should: " + stevenShouldBuy);
-            steven.setBuyingStrategy(new TwitterPublisher());
-            stevenShouldBuy = steven.sharePost();
-            System.out.println("Steven now should: " + stevenShouldBuy);
+            String stevenIsUser = steven.sharePost();
+            System.out.println("Steven should: " + stevenIsUser);
+            steven.setPublisher(new TwitterPublisher());
+            stevenIsUser = steven.sharePost();
+            System.out.println("Steven now should: " + stevenIsUser);
 
             //Then
-            Assert.assertEquals("Twitter Publisher", stevenShouldBuy);
+            Assert.assertEquals("Twitter Publisher", stevenIsUser);
         }
 
 
