@@ -1,5 +1,6 @@
 package com.kodilla.patterns.strategy.social;
 
+import com.kodilla.patterns.strategy.social.share.TwitterPublisher;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,33 +15,33 @@ import org.junit.Test;
 
             //When
             String stevenShouldBuy = steven.sharePost();
-            System.out.println("Steven is: " + stevenShouldBuy);
+            System.out.println("Steven is a " + stevenShouldBuy);
             String johnShouldBuy = john.sharePost();
-            System.out.println("John is: " + johnShouldBuy);
+            System.out.println("John is a " + johnShouldBuy);
             String kodillaShouldBuy = kodilla.sharePost();
-            System.out.println("Kodilla is: " + kodillaShouldBuy);
+            System.out.println("Kodilla is a " + kodillaShouldBuy);
 
             //Then
             Assert.assertEquals("Facebook Publisher", stevenShouldBuy);
-            Assert.assertEquals("Twitter Publisher", johnShouldBuy);
-            Assert.assertEquals("Snapchat Publisher", kodillaShouldBuy);
+            Assert.assertEquals("Snapchat Publisher", johnShouldBuy);
+            Assert.assertEquals("Twitter Publisher", kodillaShouldBuy);
         }
-/*
+
         @Test
         public void testIndividualSharingStrategy() {
             //Given
-            Customer steven = new IndividualCustomer("Steven Links");
+            User steven = new Millenials("Steven Links");
 
             //When
-            String stevenShouldBuy = steven.predict();
+            String stevenShouldBuy = steven.sharePost();
             System.out.println("Steven should: " + stevenShouldBuy);
-            steven.setBuyingStrategy(new AggressivePredictor());
-            stevenShouldBuy = steven.predict();
+            steven.setBuyingStrategy(new TwitterPublisher());
+            stevenShouldBuy = steven.sharePost();
             System.out.println("Steven now should: " + stevenShouldBuy);
 
             //Then
-            Assert.assertEquals("[Aggressive predictor] Buy stock of XYZ", stevenShouldBuy);
+            Assert.assertEquals("Twitter Publisher", stevenShouldBuy);
         }
 
- */
+
     }
