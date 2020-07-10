@@ -25,7 +25,7 @@ public class PaintingTask implements Task {
 
     @Override
     public boolean isTaskExecuted() {
-        return false;
+        return true;
     }
 
     //  @Override
