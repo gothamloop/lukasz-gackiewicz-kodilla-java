@@ -25,6 +25,20 @@ public class FindYourFlight {
     }
 
 
+//  Znalezienie wszystkich lotów wszystkich miast - cała mapa
+    public static void findAllFlights(){
+
+        AllFlights.getAllFlightsMap().entrySet().stream()
+                .forEach(System.out::println);
+}
+
+
+
+
+
+
+
+
 
 
 

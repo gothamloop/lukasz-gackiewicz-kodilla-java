@@ -7,7 +7,7 @@ public class MainService {
 
      //   FindYourFlight.findAllFlightsFromACityProvided();
         FindYourFlight.findAllConnectionFromOneCityVer2();
-
+        FindYourFlight.findAllFlights();
 
      //    FindYourFlight.filterFlights();
      //    FindYourFlight.findAllFlightsToACityProvided();
