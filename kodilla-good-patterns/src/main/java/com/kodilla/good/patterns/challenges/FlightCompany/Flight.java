@@ -12,12 +12,33 @@ public class Flight {
         this.toAirport = toAirport;
     }
 
-    public String getDepAirport() {
+    public String getFromAirport() {
         return fromAirport;
     }
-    public String getToAirport() { return byAirport; }
-    public String getArrAirport() {
+    public String getByAirport() { return byAirport; }
+    public String getToAirport() {
         return toAirport;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Flight flight = (Flight) o;
+
+        if (!fromAirport.equals(flight.fromAirport)) return false;
+        if (!byAirport.equals(flight.byAirport)) return false;
+        return toAirport.equals(flight.toAirport);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = fromAirport.hashCode();
+        result = 31 * result + byAirport.hashCode();
+        result = 31 * result + toAirport.hashCode();
+        return result;
     }
 
 }
