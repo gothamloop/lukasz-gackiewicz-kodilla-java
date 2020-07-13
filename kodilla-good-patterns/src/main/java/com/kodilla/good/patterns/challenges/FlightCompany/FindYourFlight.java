@@ -7,11 +7,11 @@ import java.util.stream.Collectors;
 public class FindYourFlight {
 
 
-   // 1. Znalezienie wszystkich lotów z podanego miasta
+    // 1. Znalezienie wszystkich lotów z podanego miasta
     public static void findAllFlightsFromACityProvided(){
 
         AllFlights.getAllFlightsMap().entrySet().stream()
-              //  .filter(flight -> Flight.getFromAirport().equals("Warsaw"))
+                .filter(flight -> Flight.getFromAirport().equals("Warsaw"))
                 .forEach(System.out::println);
     }
 
