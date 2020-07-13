@@ -7,13 +7,9 @@ public class MainService {
 
         FindYourFlight.findAllFlightsFromACityProvided();
 
+        FindYourFlight.findAllFlightsToACityProvided();
 
-
-
-
-
-
-
+        FindYourFlight.findAllFlightByACityProvided();
 
 
     }

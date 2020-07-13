@@ -14,7 +14,7 @@ public class FindYourFlight {
 
 
     // 2. Znalezienie wszystkich lotów do danego miasta
-    public void findAllFlightsToACityProvided(){
+    public static void findAllFlightsToACityProvided(){
 
         AllFlights.getAllFlightsMap().entrySet().stream()
                 .filter(flight -> Flight.getToAirport().equals("Szczecin"))
@@ -23,7 +23,7 @@ public class FindYourFlight {
 
 
     // 3. Znalezienie lotów poprzez inne miasto np. lot z Gdańska przez Kraków do Wrocławia
-    public void findAllFlightByACityProvided(){
+    public static void findAllFlightByACityProvided(){
 
         AllFlights.getAllFlightsMap().entrySet().stream()
                 .filter(flight -> Flight.getByAirport().equals("Warsaw"))
