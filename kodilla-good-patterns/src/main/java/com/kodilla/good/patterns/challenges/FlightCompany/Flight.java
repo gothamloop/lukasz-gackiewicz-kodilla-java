@@ -2,9 +2,9 @@ package com.kodilla.good.patterns.challenges.FlightCompany;
 
 public class Flight {
 
-      private String fromAirport;
-      private String byAirport;
-      private String toAirport;
+      private static String fromAirport;
+      private static String byAirport;
+      private static String toAirport;
 
     public Flight(String fromAirport, String byAirport, String toAirport) {
         this.fromAirport = fromAirport;
@@ -12,11 +12,11 @@ public class Flight {
         this.toAirport = toAirport;
     }
 
-    public String getFromAirport() {
+    public static String getFromAirport() {
         return fromAirport;
     }
-    public String getByAirport() { return byAirport; }
-    public String getToAirport() {
+    public static String getByAirport() { return byAirport; }
+    public static String getToAirport() {
         return toAirport;
     }
 
@@ -40,5 +40,17 @@ public class Flight {
         result = 31 * result + toAirport.hashCode();
         return result;
     }
+
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "fromAirport='" + fromAirport + '\'' +
+                ", byAirport='" + byAirport + '\'' +
+                ", toAirport='" + toAirport + '\'' +
+                '}';
+    }
+
+
 
 }
