@@ -5,9 +5,15 @@ public class MainService {
     public static void main(String[] args) {
 
 
-        FindYourFlight.findAllFlightsFromACityProvided();
-        FindYourFlight.findAllConnectionFromOneCityVer2();
-        FindYourFlight.findAllFlights();
+ //       FindYourFlight.findAllFlightsOnlyOneCity();
+        FindYourFlight.findAllConnectionFromOneCityList3();
+        FindYourFlight.findAllConnectionFromOneCityList4();
+
+
+
+ //       FindYourFlight.findAllFlightsFromACityProvided();
+ //       FindYourFlight.findAllConnectionFromOneCityVer2();
+ //       FindYourFlight.findAllFlights();
 
      //    FindYourFlight.filterFlights();
      //    FindYourFlight.findAllFlightsToACityProvided();

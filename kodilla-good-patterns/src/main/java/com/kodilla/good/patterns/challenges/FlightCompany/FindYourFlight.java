@@ -33,11 +33,43 @@ public class FindYourFlight {
 }
 
 
+  /*  public static void findAllFlightsOnlyOneCity() {
 
 
+        AllFlights.getAllFlightsMap().forEach((k, v) -> {
+               System.out.println("Key : " + k + " Value : " + v);
+
+              if ("1".equals(k)) {
+                  System.out.println("Hello E");
+               }
+              if ("Warsaw".equals(v)) {
+                  System.out.println("Hello Warsaw");}
+
+              if ("Warsaw".equals(AllFlights.getAllFlightsMap())) {
+                  System.out.println("Hello Warsaw");
+              }
 
 
+            });
 
+    }
+        */
+
+
+    public static void findAllConnectionFromOneCityList3() {
+        AllFlights.getAllFlightsMap().values().stream()
+                .filter(city -> city.getFromAirport().equals("Warsaw"))
+                .forEach(System.out::println);
+
+    }
+
+    public static void findAllConnectionFromOneCityList4() {
+        AllFlights.getAllFlightsMap().entrySet().stream()
+                .map(entry -> entry.getValue())
+                .filter(Flight -> Flight.getFromAirport().equals("Warsaw"))
+                .forEach(System.out::println);
+
+    }
 
 
 
