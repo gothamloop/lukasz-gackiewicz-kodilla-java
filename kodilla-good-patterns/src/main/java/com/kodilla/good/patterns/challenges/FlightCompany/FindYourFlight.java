@@ -70,6 +70,21 @@ public class FindYourFlight {
                 .forEach(System.out::println);
 
     }
+    public static void findAllConnectionFromOneCityList5() {
+
+        AllFlights.getAllFlightsMap().entrySet()
+                .stream()
+                .filter(e -> Flight.getFromAirport().equals("Szczecin"))
+                .forEach(e -> System.out.println(e.getKey() + " = " + e.getValue()));
+    }
+
+    public static void findAllConnectionFromOneCityList6() {
+
+        AllFlights.getAllFlightsMap().entrySet().stream()
+                .filter(x -> Flight.getFromAirport().startsWith("Szczecin"))
+                //.sorted()
+                .forEach(System.out::println);
+    }
 
 
 

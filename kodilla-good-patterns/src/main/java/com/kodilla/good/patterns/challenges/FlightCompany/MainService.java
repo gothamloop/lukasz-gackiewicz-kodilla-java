@@ -6,8 +6,13 @@ public class MainService {
 
 
  //       FindYourFlight.findAllFlightsOnlyOneCity();
-        FindYourFlight.findAllConnectionFromOneCityList3();
-        FindYourFlight.findAllConnectionFromOneCityList4();
+ //       FindYourFlight.findAllConnectionFromOneCityList3();
+ //       FindYourFlight.findAllConnectionFromOneCityList4();
+ //       FindYourFlight.findAllConnectionFromOneCityList5();        //Szczecin Rzeszow
+
+        FindYourFlight.findAllConnectionFromOneCityList6();          //Szczecin Rzeszow
+
+
 
 
 
