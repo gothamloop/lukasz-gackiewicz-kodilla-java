@@ -10,17 +10,20 @@ public class FindYourFlight {
     // 1. Znalezienie wszystkich lotów z podanego miasta
     public static void findAllFlightsFromACityProvided(){
 
-        AllFlights.getAllFlightsMap().entrySet().stream()
-                .filter(flight -> Flight.getFromAirport().equals("Warsaw"))
-                .forEach(System.out::println);
+     //   AllFlights.getAllFlightsMap().entrySet().stream()
+      //          .filter(flight -> Flight.getFromAirport().equals("Warsaw"))
+       //         .forEach(System.out::println);
     }
 
 
+
+
+
     public static void findAllConnectionFromOneCityVer2() {
-        AllFlights.getAllFlightsMap().entrySet().stream()
-                .map(entry -> entry.getValue())
-                .filter(city -> Flight.getFromAirport().equals("Warsaw"))
-                .forEach(System.out::println);
+    //    AllFlights.getAllFlightsMap().entrySet().stream()
+     //          // .map(entry -> entry.getValue())
+     //           .filter(city -> Flight.getFromAirport().equals("Warsaw"))
+     //           .forEach(System.out::println);
 
     }
 
@@ -28,8 +31,8 @@ public class FindYourFlight {
 //  Znalezienie wszystkich lotów wszystkich miast - cała mapa
     public static void findAllFlights(){
 
-        AllFlights.getAllFlightsMap().entrySet().stream()
-                .forEach(System.out::println);
+     //   AllFlights.getAllFlightsMap().entrySet().stream()
+      //          .forEach(System.out::println);
 }
 
 
@@ -53,7 +56,7 @@ public class FindYourFlight {
             });
 
     }
-        */
+
 
 
     public static void findAllConnectionFromOneCityList3() {
@@ -124,7 +127,7 @@ public class FindYourFlight {
                 .filter(flight -> flight.getFromAirport().equals(fromAirport))
                 .forEach(System.out::println);
     }
-*/
+
 
     // 2. Znalezienie wszystkich lotów do danego miasta
     public static void findAllFlightsToACityProvided(){
@@ -142,5 +145,5 @@ public class FindYourFlight {
                 .filter(flight -> Flight.getByAirport().equals("Warsaw"))
                 .forEach(System.out::println);
 
-    }
+    }*/
 }
