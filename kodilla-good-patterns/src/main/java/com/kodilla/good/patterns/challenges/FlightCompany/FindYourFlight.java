@@ -1,31 +1,53 @@
 package com.kodilla.good.patterns.challenges.FlightCompany;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FindYourFlight {
+
+
+
+    public static void findAllFlightsFromACityProvided1() {
+     //   AllFlights.getAllFlightsMap();
+   //wyświetla
+
+
+
+
+   }
+
+
+
+    public static void findAllFlightsToACityProvided() {
+        AllFlights.getAllFlightsMap();
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
     // 1. Znalezienie wszystkich lotów z podanego miasta
     public static void findAllFlightsFromACityProvided(){
 
-     //   AllFlights.getAllFlightsMap().entrySet().stream()
-      //          .filter(flight -> Flight.getFromAirport().equals("Warsaw"))
-       //         .forEach(System.out::println);
+        //   AllFlights.getAllFlightsMap().entrySet().stream()
+        //          .filter(flight -> Flight.getFromAirport().equals("Warsaw"))
+        //         .forEach(System.out::println);
     }
 
 
 
-
-
-    public static void findAllConnectionFromOneCityVer2() {
-    //    AllFlights.getAllFlightsMap().entrySet().stream()
-     //          // .map(entry -> entry.getValue())
-     //           .filter(city -> Flight.getFromAirport().equals("Warsaw"))
-     //           .forEach(System.out::println);
-
-    }
 
 
 //  Znalezienie wszystkich lotów wszystkich miast - cała mapa

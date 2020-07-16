@@ -1,18 +1,20 @@
 package com.kodilla.good.patterns.challenges.FlightCompany;
 
 import java.util.HashSet;
+import java.util.stream.Stream;
 
 public class AllFlights {
 
 
-    public void getAllFlightsMap() {
+    public static void getAllFlightsMap() {
 
 
         Flight flight1 = new Flight("Gdansk", "Warsaw");
-        Flight flight2 = new Flight("Gdansk", "Crakow");
+        Flight flight2 = new Flight("Gdansk", "Cracow");
         Flight flight3 = new Flight("Gdansk", "Wroclaw");
         Flight flight4 = new Flight("Gdansk", "Rzeszow");
         Flight flight5 = new Flight("Warsaw", "Gdansk");
+        Flight flight6 = new Flight("Warsaw", "Szczecin");
 
         // Creating a HashSet and filling it with objects
         HashSet<Flight> allFlightsSet = new HashSet<Flight>();
@@ -21,8 +23,31 @@ public class AllFlights {
         allFlightsSet.add(flight3);
         allFlightsSet.add(flight4);
         allFlightsSet.add(flight5);
+        allFlightsSet.add(flight6);
+
+        // converting Set to Stream
+       // Stream<Flight> stream = allFlightsSet.stream();
+
+        // displaying elements of Stream using lambda expression
+        //  stream.forEach(elem -> System.out.print(elem + " "));
+
+   //     allFlightsSet.stream()
+   //             .forEach(System.out::println);
+
+
+        allFlightsSet.stream()
+               .filter(flight -> flight.getFromAirport().equals("Warsaw"))
+               .forEach(System.out::println);
+
+        allFlightsSet.stream()
+                .filter(flight -> flight.getToAirport().equals("Cracow"))
+                .forEach(System.out::println);
+
 
     }
+
+
+
 
 
 

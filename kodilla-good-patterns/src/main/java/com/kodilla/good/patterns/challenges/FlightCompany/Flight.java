@@ -2,8 +2,9 @@ package com.kodilla.good.patterns.challenges.FlightCompany;
 
 public class Flight {
 
-      private String fromAirport;
-      private String toAirport;
+
+    private String fromAirport;
+    private String toAirport;
 
     public Flight(String fromAirport, String toAirport) {
         this.fromAirport = fromAirport;
