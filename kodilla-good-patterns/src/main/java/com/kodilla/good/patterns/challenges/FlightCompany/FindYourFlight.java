@@ -12,7 +12,7 @@ public class FindYourFlight {
 
     public static void findAllFlightsFromACityProvided1() {
      //   AllFlights.getAllFlightsMap();
-     //wyświetla
+
   }
 
 
@@ -21,6 +21,9 @@ public class FindYourFlight {
         AllFlights.getAllFlightsMap();
 
     }
+
+
+
 
 
 

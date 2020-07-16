@@ -1,6 +1,8 @@
 package com.kodilla.good.patterns.challenges.FlightCompany;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class AllFlights {
@@ -35,13 +37,27 @@ public class AllFlights {
    //             .forEach(System.out::println);
 
 
+
+        List<String> namesOfFlights = (List<String>) allFlightsSet.stream()
+                .filter(flight -> flight.getToAirport().equals("Cracow"));
+                //.forEach(System.out::println);
+        System.out.println(namesOfFlights);
+
+
+
+
+/*
         allFlightsSet.stream()
-               .filter(flight -> flight.getFromAirport().equals("Warsaw"))
-               .forEach(System.out::println);
+                .filter(flight -> flight.getFromAirport().equals("Warsaw"))
+                .forEach(System.out::println);
 
         allFlightsSet.stream()
                 .filter(flight -> flight.getToAirport().equals("Cracow"))
                 .forEach(System.out::println);
+*/
+
+
+
 
 
     }
