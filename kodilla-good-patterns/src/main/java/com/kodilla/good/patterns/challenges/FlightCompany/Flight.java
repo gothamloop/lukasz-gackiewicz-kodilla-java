@@ -2,21 +2,18 @@ package com.kodilla.good.patterns.challenges.FlightCompany;
 
 public class Flight {
 
-      private static String fromAirport;
-      private static String byAirport;
-      private static String toAirport;
+      private String fromAirport;
+      private String toAirport;
 
-    public Flight(String fromAirport, String byAirport, String toAirport) {
+    public Flight(String fromAirport, String toAirport) {
         this.fromAirport = fromAirport;
-        this.byAirport = byAirport;
         this.toAirport = toAirport;
     }
 
-    public static String getFromAirport() {
+    public String getFromAirport() {
         return fromAirport;
     }
-    public static String getByAirport() { return byAirport; }
-    public static String getToAirport() {
+    public String getToAirport() {
         return toAirport;
     }
 
@@ -29,14 +26,12 @@ public class Flight {
         Flight flight = (Flight) o;
 
         if (!fromAirport.equals(flight.fromAirport)) return false;
-        if (!byAirport.equals(flight.byAirport)) return false;
         return toAirport.equals(flight.toAirport);
     }
 
     @Override
     public int hashCode() {
         int result = fromAirport.hashCode();
-        result = 31 * result + byAirport.hashCode();
         result = 31 * result + toAirport.hashCode();
         return result;
     }
@@ -46,7 +41,6 @@ public class Flight {
     public String toString() {
         return "Flight{" +
                 "fromAirport='" + fromAirport + '\'' +
-                ", byAirport='" + byAirport + '\'' +
                 ", toAirport='" + toAirport + '\'' +
                 '}';
     }

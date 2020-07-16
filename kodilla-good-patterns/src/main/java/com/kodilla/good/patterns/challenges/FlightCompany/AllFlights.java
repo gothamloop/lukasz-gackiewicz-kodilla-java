@@ -1,11 +1,32 @@
 package com.kodilla.good.patterns.challenges.FlightCompany;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
 
 public class AllFlights {
 
-        public static Map<Integer, Flight> getAllFlightsMap() {
+
+    public void getAllFlightsMap() {
+
+
+        Flight flight1 = new Flight("Gdansk", "Warsaw");
+        Flight flight2 = new Flight("Gdansk", "Crakow");
+        Flight flight3 = new Flight("Gdansk", "Wroclaw");
+        Flight flight4 = new Flight("Gdansk", "Rzeszow");
+        Flight flight5 = new Flight("Warsaw", "Gdansk");
+
+        // Creating a HashSet and filling it with objects
+        HashSet<Flight> allFlightsSet = new HashSet<Flight>();
+        allFlightsSet.add(flight1);
+        allFlightsSet.add(flight2);
+        allFlightsSet.add(flight3);
+        allFlightsSet.add(flight4);
+        allFlightsSet.add(flight5);
+
+    }
+
+
+
+    /*    public static Map<Integer, Flight> getAllFlightsMap() {
             Map<Integer, Flight> allFlightsMap = new HashMap<Integer, Flight>();
             allFlightsMap.put(0,new Flight("Gdansk","", "Warsaw"));
             allFlightsMap.put(1,new Flight("Gdansk","Warsaw", "Crakow"));
@@ -30,5 +51,10 @@ public class AllFlights {
 
             return allFlightsMap;
         }
+
+
+
+
+     */
 }
 
