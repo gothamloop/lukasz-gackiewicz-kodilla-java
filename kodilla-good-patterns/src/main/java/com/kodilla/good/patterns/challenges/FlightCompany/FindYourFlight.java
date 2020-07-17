@@ -8,7 +8,7 @@ public class FindYourFlight {
 
     public List<Flight> fromFlights() {
         return AllFlights.getAllFlightsMap().stream()
-                .filter(flight -> flight.getFromAirport().equals())
+                .filter(flight -> flight.getFromAirport().equals("Warsaw"))
                 .collect(Collectors.toList());
     }
 
