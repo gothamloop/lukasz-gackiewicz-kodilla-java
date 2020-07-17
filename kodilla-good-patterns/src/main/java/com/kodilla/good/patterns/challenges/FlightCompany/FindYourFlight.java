@@ -8,12 +8,17 @@ import java.util.stream.Stream;
 
 public class FindYourFlight {
 
+    public List<Flight> fromFlights(String fromAirportFlight) {
+        return AllFlights.getAllFlightsMap().stream()
+                .filter(flight -> flight.getFromAirport().equals(fromAirportFlight))
+                .collect(Collectors.toList());
+    }
 
 
     public static void findAllFlightsFromACityProvided1() {
-     //   AllFlights.getAllFlightsMap();
+        //   AllFlights.getAllFlightsMap();
 
-  }
+    }
 
 
 
@@ -21,12 +26,6 @@ public class FindYourFlight {
         AllFlights.getAllFlightsMap();
 
     }
-
-
-
-
-
-
 
 
 

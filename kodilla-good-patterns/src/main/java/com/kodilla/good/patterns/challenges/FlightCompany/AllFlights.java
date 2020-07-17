@@ -1,15 +1,10 @@
 package com.kodilla.good.patterns.challenges.FlightCompany;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
-import java.util.stream.Stream;
 
 public class AllFlights {
 
-
-    public static void getAllFlightsMap() {
-
+   public static HashSet<Flight> getAllFlightsMap() {
 
         Flight flight1 = new Flight("Gdansk", "Warsaw");
         Flight flight2 = new Flight("Gdansk", "Cracow");
@@ -27,6 +22,10 @@ public class AllFlights {
         allFlightsSet.add(flight5);
         allFlightsSet.add(flight6);
 
+        return allFlightsSet;
+
+    }
+}
         // converting Set to Stream
        // Stream<Flight> stream = allFlightsSet.stream();
 
@@ -38,12 +37,23 @@ public class AllFlights {
 
 
 
-        List<String> namesOfFlights = (List<String>) allFlightsSet.stream()
-                .filter(flight -> flight.getToAirport().equals("Cracow"));
-                //.forEach(System.out::println);
-        System.out.println(namesOfFlights);
+   //     List<String> namesOfFlights = (List<String>) allFlightsSet.stream()
+   //             .filter(flight -> flight.getToAirport().equals("Cracow"));
+   //             .collect(Collectors.toList());
+   //     //.forEach(System.out::println);
+   //     System.out.println(namesOfFlights);
 
 
+//        Stream<String> s = Stream.of("Geeks",
+  //              "for",
+    //            "GeeksforGeeks",
+      //          "Geeks Classes");
+
+// using Collectors toList() function
+        //List<String> myList = s.collect(Collectors.toList());
+
+        // printing the elements
+       // System.out.println(myList);
 
 
 /*
@@ -54,13 +64,23 @@ public class AllFlights {
         allFlightsSet.stream()
                 .filter(flight -> flight.getToAirport().equals("Cracow"))
                 .forEach(System.out::println);
+
+
+                //problem z castowaniem
+                List<String> namesOfFlights = (List<String>) allFlightsSet.stream()
+                .filter(flight -> flight.getToAirport().equals("Cracow"));
+                //.forEach(System.out::println);
+        System.out.println(namesOfFlights);
+
+
+
 */
 
 
 
 
 
-    }
+
 
 
 
@@ -97,5 +117,5 @@ public class AllFlights {
 
 
      */
-}
+
 
