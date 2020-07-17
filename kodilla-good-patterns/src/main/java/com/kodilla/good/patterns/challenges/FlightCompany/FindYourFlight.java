@@ -1,16 +1,14 @@
 package com.kodilla.good.patterns.challenges.FlightCompany;
 
-import java.util.HashSet;
+
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class FindYourFlight {
 
-    public List<Flight> fromFlights(String fromAirportFlight) {
+    public List<Flight> fromFlights() {
         return AllFlights.getAllFlightsMap().stream()
-                .filter(flight -> flight.getFromAirport().equals(fromAirportFlight))
+                .filter(flight -> flight.getFromAirport().equals())
                 .collect(Collectors.toList());
     }
 
