@@ -7,10 +7,21 @@ import java.util.stream.Collectors;
 public class FindYourFlight {
 
     public List<Flight> fromFlights() {
-        return AllFlights.getAllFlightsMap().stream()
+        return AllFlights.getAllFlightsMap()
+                .stream()
                 .filter(flight -> flight.getFromAirport().equals("Warsaw"))
                 .collect(Collectors.toList());
     }
+
+    public List<Flight> toFlights() {
+        return AllFlights.getAllFlightsMap()
+                .stream()
+                .filter(flight -> flight.getToAirport().equals("Szczecin"))
+                .collect(Collectors.toList());
+    }
+
+
+
 
 
     public static void findAllFlightsFromACityProvided1() {

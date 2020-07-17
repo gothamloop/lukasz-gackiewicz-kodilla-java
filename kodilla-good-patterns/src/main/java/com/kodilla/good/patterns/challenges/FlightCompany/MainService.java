@@ -6,5 +6,6 @@ public class MainService {
 
         System.out.println(FindYourFlight.fromFlights());
 
+        System.out.println(FindYourFlight.toFlights());
     }
 }
