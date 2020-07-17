@@ -6,14 +6,14 @@ import java.util.stream.Collectors;
 
 public class FindYourFlight {
 
-    public List<Flight> fromFlights() {
+    public static List<Flight> fromFlights() {
         return AllFlights.getAllFlightsMap()
                 .stream()
                 .filter(flight -> flight.getFromAirport().equals("Warsaw"))
                 .collect(Collectors.toList());
     }
 
-    public List<Flight> toFlights() {
+    public static List<Flight> toFlights() {
         return AllFlights.getAllFlightsMap()
                 .stream()
                 .filter(flight -> flight.getToAirport().equals("Szczecin"))
