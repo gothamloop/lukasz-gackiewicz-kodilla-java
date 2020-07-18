@@ -6,23 +6,23 @@ import java.util.stream.Collectors;
 
 public class FindYourFlight {
 
-    public static List<Flight> fromFlights() {
+    public static List<Flight> fromFlights(String flightFromACity) {
         return AllFlights.getAllFlightsMap()
                 .stream()
-                .filter(flight -> flight.getFromAirport().equals("Warsaw"))
+                .filter(flight -> flight.getFromAirport().equals(flightFromACity))
                 .collect(Collectors.toList());
     }
 
-    public static List<Flight> toFlights() {
+    public static List<Flight> toFlights(String flightToACity) {
         return AllFlights.getAllFlightsMap()
                 .stream()
-                .filter(flight -> flight.getToAirport().equals("Szczecin"))
+                .filter(flight -> flight.getToAirport().equals(flightToACity))
                 .collect(Collectors.toList());
     }
 
 
 
-
+/*
 
     public static void findAllFlightsFromACityProvided1() {
         //   AllFlights.getAllFlightsMap();

@@ -4,8 +4,8 @@ public class MainService {
 
     public static void main(String[] args) {
 
-        System.out.println(FindYourFlight.fromFlights());
+        System.out.println(FindYourFlight.fromFlights("Warsaw"));
 
-        System.out.println(FindYourFlight.toFlights());
+        System.out.println(FindYourFlight.toFlights("Szczecin"));
     }
 }
