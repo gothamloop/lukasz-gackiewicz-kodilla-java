@@ -26,6 +26,10 @@ public class AllFlights {
 
     }
 }
+
+
+
+
         // converting Set to Stream
        // Stream<Flight> stream = allFlightsSet.stream();
 
@@ -75,18 +79,6 @@ public class AllFlights {
 
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
     /*    public static Map<Integer, Flight> getAllFlightsMap() {
             Map<Integer, Flight> allFlightsMap = new HashMap<Integer, Flight>();
             allFlightsMap.put(0,new Flight("Gdansk","", "Warsaw"));
