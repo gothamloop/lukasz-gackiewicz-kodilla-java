@@ -1,11 +1,13 @@
 package com.kodilla.good.patterns.challenges.FlightCompany;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class FindYourFlight {
 
+    /*
     public static List<Flight> fromFlights(String flightFromACity) {
         return AllFlights.getAllFlightsMap()
                 .stream()
@@ -19,6 +21,36 @@ public class FindYourFlight {
                 .filter(flight -> flight.getToAirport().equals(flightToACity))
                 .collect(Collectors.toList());
     }
+
+
+    public static List<Flight> fromToByFlights(String flightFromACity,String flightToACity) {
+        return AllFlights.getAllFlightsMap()
+                .stream()
+                .filter(flight -> flight.getFromAirport().equals(flightFromACity))
+                .filter(flight -> flight.getToAirport().equals(flightToACity))
+                .collect(Collectors.toList());
+    }
+*/
+
+
+  public static List fromByToFlight (String from, String by, String to) {
+      List<Flight> fromByToFlightList = AllFlights.getAllFlightsMap()
+              .stream()
+              .filter(flight -> flight.getFromAirport().equalsIgnoreCase(from))
+              .filter(flight -> flight.getToAirport().equalsIgnoreCase(by))
+              .filter(flight -> flight.getToAirport().equalsIgnoreCase(to))
+              .collect(Collectors.toList());
+
+
+      return fromByToFlightList;
+  }
+
+
+
+
+
+
+
 
 
 

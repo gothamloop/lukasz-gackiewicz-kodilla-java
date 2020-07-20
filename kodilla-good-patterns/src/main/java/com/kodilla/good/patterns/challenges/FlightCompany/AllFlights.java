@@ -18,6 +18,7 @@ public class AllFlights {
         Flight flight10 = new Flight("Warsaw", "Rzeszow");
         Flight flight11 = new Flight("Cracow", "Warsaw");
         Flight flight12 = new Flight("Cracow", "Gdansk");
+        Flight flight13 = new Flight("Cracow", "Wroclaw");
 
         // Creating a HashSet and filling it with objects
         HashSet<Flight> allFlightsSet = new HashSet<Flight>();
@@ -33,6 +34,7 @@ public class AllFlights {
         allFlightsSet.add(flight10);
         allFlightsSet.add(flight11);
         allFlightsSet.add(flight12);
+        allFlightsSet.add(flight13);
 
         return allFlightsSet;
 
