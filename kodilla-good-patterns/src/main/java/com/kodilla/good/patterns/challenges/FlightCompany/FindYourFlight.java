@@ -36,9 +36,9 @@ public class FindYourFlight {
   public static List fromByToFlight (String from, String by, String to) {
       List<Flight> fromByToFlightList = AllFlights.getAllFlightsMap()
               .stream()
-              .filter(flight -> flight.getFromAirport().equalsIgnoreCase(from))
-              .filter(flight -> flight.getToAirport().equalsIgnoreCase(by))
-              .filter(flight -> flight.getToAirport().equalsIgnoreCase(to))
+              .filter(flight -> flight.getFromAirport().equals(from))
+              .filter(flight -> flight.getToAirport().equals(by))
+              .filter(flight -> flight.getToAirport().equals(to))
               .collect(Collectors.toList());
 
 
