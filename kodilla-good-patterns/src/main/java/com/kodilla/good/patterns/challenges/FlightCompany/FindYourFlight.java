@@ -32,7 +32,6 @@ public class FindYourFlight {
     }
 */
 
-
   public static List fromByToFlight (String from, String by, String to) {
       List<Flight> fromByToFlightList = AllFlights.getAllFlightsMap()
               .stream()
