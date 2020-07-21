@@ -38,9 +38,13 @@ public class FindYourFlight {
               .stream()
               .filter(flight -> flight.getFromAirport().equals(from))
               .filter(flight -> flight.getToAirport().equals(by))
-              .filter(flight -> flight.getToAirport().equals(to))
               .collect(Collectors.toList());
 
+      List<Flight> fromByToFlightList2 = AllFlights.getAllFlightsMap()
+              .stream()
+              .filter(flight -> flight.getFromAirport().equals(by))
+              .filter(flight -> flight.getToAirport().equals(to))
+              .collect(Collectors.toList());
 
       return fromByToFlightList;
   }
