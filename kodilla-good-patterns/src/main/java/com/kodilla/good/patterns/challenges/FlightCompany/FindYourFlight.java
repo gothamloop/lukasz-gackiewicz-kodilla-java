@@ -45,9 +45,12 @@ public class FindYourFlight {
               .filter(flight -> flight.getToAirport().equals(to))
               .collect(Collectors.toList());
 
-      return fromByToFlightList;
+      //return fromByToFlightList;
 
+      List fromByToFlight = new ArrayList(fromByToFlightList);
 
+      fromByToFlight.addAll(fromByToFlightList2);
 
+      return fromByToFlight;
   }
 }
