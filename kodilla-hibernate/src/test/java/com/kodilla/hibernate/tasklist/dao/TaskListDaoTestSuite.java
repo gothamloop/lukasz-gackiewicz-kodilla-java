@@ -16,6 +16,7 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TaskListDaoTestSuite {
+    private static final String LISTNAME = "ToDo List";
     @Autowired
     private TaskListDao taskListDao;
     private static final String DESCRIPTION = "Test: Learn Hibernate";
