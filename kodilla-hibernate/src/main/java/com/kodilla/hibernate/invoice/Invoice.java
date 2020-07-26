@@ -1,16 +1,15 @@
 package com.kodilla.hibernate.invoice;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Invoice {
 
     private int id;
     private String number;
-    private List<Item> items;
+    private List<Item> items = new ArrayList<>();
 
 
     public Invoice() {
@@ -29,11 +28,17 @@ public class Invoice {
         return id;
     }
 
-
+    @Column(name = "NUMBER")
     public String getNumber() {
         return number;
     }
 
+    @OneToMany(
+            targetEntity = Item.class,
+            mappedBy = "invoice",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
     public List<Item> getItems() {
         return items;
     }

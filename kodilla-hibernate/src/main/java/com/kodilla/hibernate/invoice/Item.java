@@ -13,6 +13,18 @@ public class Item {
     private BigDecimal price;
     private int quantity;
     private BigDecimal value;
+    private Invoice invoice;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "INVOICE_ID")
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
+    }
 
     public Item() {
     }
@@ -23,10 +35,36 @@ public class Item {
         this.quantity = quantity;
     }
 
+
     @Id
     @GeneratedValue
     @NotNull
     @Column(name = "ITEM_ID", unique = true)
+    public int getId() {
+        return id;
+    }
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "PRODUCT_ID")
+    public Product getProduct() {
+        return product;
+    }
+
+    @Column(name = "PRICE")
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    @Column(name = "QUANTITY")
+    public int getQuantity() {
+        return quantity;
+    }
+
+    @Column(name = "VALUE")
+    public BigDecimal getValue() {
+        return value;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -45,25 +83,5 @@ public class Item {
 
     public void setValue(BigDecimal value) {
         this.value = value;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public BigDecimal getValue() {
-        return value;
     }
 }
