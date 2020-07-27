@@ -26,10 +26,9 @@ public class InvoiceDaoTestSuite {
     public void testInvoiceDaoSave() {
 
         //Given
-        Invoice invoice = new Invoice("27/07/2020");
         Product bicycle = new Product("bicycle");
         Product helmet = new Product("helmet");
-
+        Invoice invoice = new Invoice("27/07/2020");
         Item ibicycle = new Item(bicycle, new BigDecimal(7500), 1);
         Item ihelmet = new Item(helmet, new BigDecimal(900), 1);
 
