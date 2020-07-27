@@ -39,22 +39,14 @@ public class InvoiceDaoTestSuite {
         items.add(ibicycle);
         items.add(ihelmet);
 
-        invoice.setItems(items);
-
         //When
-        invoice.getItems().add(ibicycle);
-        invoice.getItems().add(ihelmet);
-
-        ibicycle.setInvoice(invoice);
-        ihelmet.setInvoice(invoice);
-
         invoiceDao.save(invoice);
-        int invoiceId = invoice.getId();
+        int yourInvoice = invoice.getId();
 
         //Then
-        Assert.assertNotEquals(0, invoiceId);
+        Assert.assertNotEquals(0, yourInvoice);
 
         //CleanUp
-        invoiceDao.deleteById(invoiceId);
+        invoiceDao.deleteById(yourInvoice);
     }
 }
