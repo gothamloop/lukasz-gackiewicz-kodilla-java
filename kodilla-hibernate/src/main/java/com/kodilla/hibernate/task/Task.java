@@ -25,7 +25,7 @@ import java.util.Date;
 @NamedNativeQuery(
         name = "Task.retrieveTasksWithEnoughTime",
         query = "SELECT * FROM TASKS" +
-                " WHERE DATEIFF(DATE_ADD(CREATED,INTERVAL DURATION DAY), NOW()) > 5",
+                " WHERE DATEDIFF(DATE_ADD(CREATED, INTERVAL DURATION DAY), NOW()) > 5",
         resultClass = Task.class
 )
 
