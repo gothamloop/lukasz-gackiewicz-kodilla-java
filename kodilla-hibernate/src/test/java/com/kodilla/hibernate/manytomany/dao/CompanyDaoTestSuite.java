@@ -68,10 +68,8 @@ public class CompanyDaoTestSuite {
      @Test
    public void testRetrieveCompany() {
        //Given
-       Company softwareMachine = new Company("Company XYZ");
-
-       companyDao.save(softwareMachine);
-
+       Company companyXyz = new Company("Company XYZ");
+       companyDao.save(companyXyz);
 
        //When
        List<Company> companyName = companyDao.retrieveCompanyName("Com");
@@ -80,9 +78,7 @@ public class CompanyDaoTestSuite {
        Assert.assertEquals(1, companyName.size());
 
        //CleanUp
-       companyDao.delete(softwareMachine);
-
-
+       companyDao.delete(companyXyz);
    }
 
 }
