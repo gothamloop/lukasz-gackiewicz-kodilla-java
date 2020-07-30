@@ -7,11 +7,11 @@ import java.util.List;
 
 @NamedQueries({
         @NamedQuery(
-                name = "Employee.retireveEmployeeLastName",
+                name = "Employee.retrieveEmployeeLastName",
                 query = "FROM Employee WHERE lastname = :LASTNAME"
         ),
         @NamedQuery(
-                name = "Employee.retrieveEmployeesParametr",
+                name = "Employee.retrieveEmployeeParameter",
                 query = "FROM Employee WHERE lastname LIKE CONCAT ('%',:LASTNAME,'%')"
         ),
 })
