@@ -8,7 +8,7 @@ import java.util.List;
 @NamedNativeQueries({
         @NamedNativeQuery(
                 name = "Company.retrieveCompanyName",
-                query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :CHARS",
+                query = "SELECT SUBSTRING(COMPANY_NAME, 1, 3) FROM COMPANIES",
                 resultClass = Company.class
         )
 })

@@ -68,11 +68,11 @@ public class CompanyDaoTestSuite {
      @Test
    public void testRetrieveCompany() {
        //Given
-       Company companyXyz = new Company("Company XYZ");
-       companyDao.save(companyXyz);
+       Company softwareMachine = new Company("Software Machine");
+       companyDao.save(softwareMachine);
 
        //When
-       List<Company> companyName = companyDao.retrieveCompanyName("Com");
+       List<Company> companyName = companyDao.retrieveCompanyName("Sof");
 
        //Then
        Assert.assertEquals(1, companyName.size());
