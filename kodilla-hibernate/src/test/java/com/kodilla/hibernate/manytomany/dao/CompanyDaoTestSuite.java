@@ -105,16 +105,18 @@ public class CompanyDaoTestSuite {
 
         //Then
 
-        Assert.assertEquals(21, companyWithLetters.size());
-        Assert.assertEquals(2, employeeLastname.size());
+        Assert.assertEquals(1, companyWithLetters.size());
+        Assert.assertEquals(1, employeeLastname.size());
         //CleanUp
-        try {
-            companyDao.deleteById(softwareMachineId);
-            companyDao.deleteById(dataMaestersId);
-            companyDao.deleteById(greyMatterId);
-        } catch (Exception e) {
-            //do nothing
-        }
+        companyDao.deleteAll();
+
+       // try {
+       //     companyDao.deleteById(softwareMachineId);
+       //     companyDao.deleteById(dataMaestersId);
+       //     companyDao.deleteById(greyMatterId);
+       // } catch (Exception e) {
+       //     //do nothing
+      //  }
 
     }
 }
