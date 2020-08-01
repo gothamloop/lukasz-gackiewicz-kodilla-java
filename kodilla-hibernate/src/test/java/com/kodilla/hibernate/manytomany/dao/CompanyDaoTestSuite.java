@@ -14,6 +14,7 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CompanyDaoTestSuite {
+
     @Autowired
     CompanyDao companyDao;
     @Autowired
@@ -103,16 +104,8 @@ public class CompanyDaoTestSuite {
 
         Assert.assertEquals(1, companyWithLetters.size());
         Assert.assertEquals(1, employeeLastname.size());
+
         //CleanUp
         companyDao.deleteAll();
-
-       // try {
-       //     companyDao.deleteById(softwareMachineId);
-       //     companyDao.deleteById(dataMaestersId);
-       //     companyDao.deleteById(greyMatterId);
-       // } catch (Exception e) {
-       //     //do nothing
-      //  }
-
     }
 }
