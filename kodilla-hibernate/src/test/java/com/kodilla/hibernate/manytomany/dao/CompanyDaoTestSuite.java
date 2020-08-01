@@ -92,12 +92,8 @@ public class CompanyDaoTestSuite {
         lindaKovalsky.getCompanies().add(greyMatter);
 
         companyDao.save(softwareMachine);
-        int softwareMachineId = softwareMachine.getId();
         companyDao.save(dataMaesters);
-        int dataMaestersId = dataMaesters.getId();
         companyDao.save(greyMatter);
-        int greyMatterId = greyMatter.getId();
-
 
         //When
         List<Company> companyWithLetters = companyDao.retrieveCompanyWithThreeLetters("Sof");
