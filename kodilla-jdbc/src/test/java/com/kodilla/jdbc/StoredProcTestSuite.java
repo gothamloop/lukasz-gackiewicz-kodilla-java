@@ -56,13 +56,4 @@ public class StoredProcTestSuite {
         }
         assertEquals(3, howMany);
     }
-
-
-
-
-
-
-
-
-
 }
