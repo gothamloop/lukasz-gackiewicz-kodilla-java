@@ -16,8 +16,8 @@ public class MedianAdapterTestSuite {
 
         //GIVEN
         MedianAdapter medianAdapter = new MedianAdapter();
-        Book book1 = new Book("a", "a", 1, "abc");
-        Book book2 = new Book("b", "b", 2, "def");
+        Book book1 = new Book("a", "a", 2019, "abc");
+        Book book2 = new Book("b", "b", 2020, "def");
 
         Set<Book> books = new HashSet<>();
         books.add(book1);
@@ -28,6 +28,6 @@ public class MedianAdapterTestSuite {
 
         //THEN
         System.out.println(median);
-        assertEquals(2, median);
+        assertEquals(2020, median);
     }
 }
