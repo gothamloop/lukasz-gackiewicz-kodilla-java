@@ -2,6 +2,7 @@ package com.kodilla.testing2.crudapp;
 
 import com.kodilla.testing2.config.WebDriverConfig;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -13,7 +14,7 @@ import java.util.Random;
 
 import static org.junit.Assert.assertTrue;
 
-public class CrudAppTestSuite {
+public class  {
     private static final String BASE_URL = "https://gothamloop.github.io/";
     private WebDriver driver;
     private Random generator;
@@ -30,15 +31,7 @@ public class CrudAppTestSuite {
         driver.close();
     }
 
-    @Test
-    public void shouldCreateTrelloCard() throws InterruptedException {
-        String taskName = createCrudAppTestTask();
-        sendTestTaskToTrello(taskName);
-        assertTrue(checkTaskExistsInTrello(taskName));
-        deleteCrudAppTestTask(taskName);
-    }
-
-    private String createCrudAppTestTask() throws InterruptedException {
+   private String createCrudAppTestTask() throws InterruptedException {
         final String XPATH_TASK_NAME = "//form[contains(@action, \"createTask\")]/fieldset[1]/input";
         final String XPATH_TASK_CONTENT = "//form[contains(@action, \"createTask\")]/fieldset[2]/textarea";
         final String XPATH_ADD_BUTTON = "//form[contains(@action, \"createTask\")]/fieldset[3]/button";
@@ -70,7 +63,7 @@ public class CrudAppTestSuite {
                 .forEach(theForm -> {
                     WebElement selectElement = theForm.findElement(By.xpath(".//select[1]"));
                     Select select = new Select(selectElement);
-                    select.selectByIndex(2);
+                    select.selectByIndex(1);
 
                     WebElement buttonCreateCard =
                             theForm.findElement(By.xpath(".//button[contains(@class, \"card-creation\")]"));
@@ -89,13 +82,15 @@ public class CrudAppTestSuite {
 
         driverTrello.findElement(By.id("user")).sendKeys("lukasz@webtunnelo.com");
         driverTrello.findElement(By.id("password")).sendKeys("4%CNsjs8wWKSMC<.;p@@4CZX");
-        WebElement el = driverTrello.findElement(By.id("login"));
-        el.submit();
+        WebElement log = driverTrello.findElement(By.id("login"));
+        log.submit();
 
         Thread.sleep(4000);
 
         driverTrello.findElement(By.id("password")).sendKeys("4%CNsjs8wWKSMC<.;p@@4CZX");
         driverTrello.findElement(By.id("login-submit")).submit();
+        WebElement log2 = driverTrello.findElement(By.id("login"));
+        log2.submit();
 
         Thread.sleep(4000);
 
@@ -127,5 +122,13 @@ public class CrudAppTestSuite {
                 });
 
         Thread.sleep(4000);
+    }
+
+    @Test
+    public void shouldCreateTrelloCard() throws InterruptedException {
+        String taskName = createCrudAppTestTask();
+        sendTestTaskToTrello(taskName);
+        Assert.assertTrue(checkTaskExistsInTrello(taskName));
+        deleteCrudAppTestTask(taskName);
     }
 }
