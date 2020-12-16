@@ -14,7 +14,7 @@ import java.util.Random;
 
 import static org.junit.Assert.assertTrue;
 
-public class  {
+public class CrudAppTestSuite {
     private static final String BASE_URL = "https://gothamloop.github.io/";
     private WebDriver driver;
     private Random generator;
