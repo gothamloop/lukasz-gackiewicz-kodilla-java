@@ -7,13 +7,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.Random;
-import java.util.stream.Collectors;
-
 import static org.junit.Assert.assertTrue;
 
 public class CrudAppTestSuite {
@@ -74,7 +69,6 @@ public class CrudAppTestSuite {
         Thread.sleep(5000);
     }
 
-//
    private boolean checkTaskExistsInTrello(String taskName) throws InterruptedException {
           final String TRELLO_URL = "https://trello.com/pl/login";
           boolean result = false;
@@ -93,7 +87,6 @@ public class CrudAppTestSuite {
           driverTrello.findElement(By.id("login-submit")).submit();
 
 
-
           Thread.sleep(12000);
 
           driverTrello.findElements(By.xpath("//a[@class = \"board-tile\"]")).stream()
@@ -110,9 +103,6 @@ public class CrudAppTestSuite {
           return result;
 }
 
-
-
-    //
     private void deleteCrudAppTestTask(String taskName) throws InterruptedException {
         driver.switchTo().alert().accept();
 
