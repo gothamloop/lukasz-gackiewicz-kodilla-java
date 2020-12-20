@@ -18,7 +18,7 @@ public class CrudAppTestSuite {
 
     @Before
     public void initTest() {
-        driver = WebDriverConfig.getDriver(WebDriverConfig.FIREFOX);
+        driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driver.get(BASE_URL);
         generator = new Random();
     }
@@ -73,7 +73,7 @@ public class CrudAppTestSuite {
           final String TRELLO_URL = "https://trello.com/pl/login";
           boolean result = false;
 
-          WebDriver driverTrello = WebDriverConfig.getDriver(WebDriverConfig.FIREFOX);
+          WebDriver driverTrello = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
           driverTrello.get(TRELLO_URL);
 
           driverTrello.findElement(By.id("user")).sendKeys("lukasz@webtunnelo.com");
@@ -122,7 +122,7 @@ public class CrudAppTestSuite {
     public void shouldCreateTrelloCard() throws InterruptedException {
         String taskName = createCrudAppTestTask();
         sendTestTaskToTrello(taskName);
-        deleteCrudAppTestTask(taskName);
         assertTrue(checkTaskExistsInTrello(taskName));
+        deleteCrudAppTestTask(taskName);
     }
 }
