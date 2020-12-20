@@ -1,15 +1,23 @@
 package com.kodilla.hibernate.manytomany;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedNativeQuery(
-        name = "Company.retrieveCompanyWithThreeLetters",
-        query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME,1,3) = :LETTERS ",
-        resultClass = Company.class
-)
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "Company.retrieveCompanyWord",
+                query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT(:NAME, '%')",
+                resultClass = Company.class
+        ),
+
+        @NamedNativeQuery(
+                name = "Company.retrieveCompanyPartName",
+                query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%',:NAME, '%')",
+                resultClass = Company.class
+        )
+})
+
 
 @Entity
 @Table(name = "COMPANIES")
@@ -28,7 +36,7 @@ public class Company {
     @Id
     @GeneratedValue
     @NotNull
-    @Column(name =  "COMPANY_ID",unique = true)
+    @Column(name = "COMPANY_ID", unique = true)
     public int getId() {
         return id;
     }
@@ -39,6 +47,14 @@ public class Company {
         return name;
     }
 
+    private void setId(int id) {
+        this.id = id;
+    }
+
+    private void setName(String name) {
+        this.name = name;
+    }
+
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
     public List<Employee> getEmployees() {
         return employees;
@@ -46,13 +62,5 @@ public class Company {
 
     private void setEmployees(List<Employee> employees) {
         this.employees = employees;
-    }
-
-    private void setId(int id) {
-        this.id = id;
-    }
-
-    private void setName(String name) {
-        this.name = name;
     }
 }

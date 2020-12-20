@@ -5,10 +5,19 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
-        name = "Employee.retrieveEmployeeLastname",
-        query = "FROM Employee WHERE lastname = :LASTNAME"
-)
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "Employee.retrieveEmployeeWithLastName",
+                query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE CONCAT(:LASTNAME, '%')",
+                resultClass = Employee.class
+        ),
+
+        @NamedNativeQuery(
+                name = "Employee.retrieveEmployeePartName",
+                query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE CONCAT('%',:LASTNAME, '%')",
+                resultClass = Employee.class
+        )
+})
 
 @Entity
 @Table(name = "EMPLOYEES")
@@ -46,6 +55,18 @@ public class Employee {
         return lastname;
     }
 
+    private void setId(int id) {
+        this.id = id;
+    }
+
+    private void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    private void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "JOIN_COMPANY_EMPLOYEE",
@@ -58,17 +79,5 @@ public class Employee {
 
     private void setCompanies(List<Company> companies) {
         this.companies = companies;
-    }
-
-    private void setId(int id) {
-        this.id = id;
-    }
-
-    private void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    private void setLastname(String lastname) {
-        this.lastname = lastname;
     }
 }

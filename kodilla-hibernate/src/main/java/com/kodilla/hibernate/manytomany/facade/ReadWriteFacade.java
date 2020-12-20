@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public final class ReadWriteFacade {
+public class ReadWriteFacade {
 
     @Autowired
     private CompanyDao companyDao;
@@ -20,13 +20,33 @@ public final class ReadWriteFacade {
     @Autowired
     private EmployeeDao employeeDao;
 
-    public List<Company> searchCompany(String partOfName)  {
-        List<Company> companyList = companyDao.retrieve_PartOfLastName(partOfName);
-        return companyList;
+    private static final Logger LOGGER = LoggerFactory.getLogger(ReadWriteFacade.class);
+
+    public List<Company> findCompany(String name) {
+
+        LOGGER.info("Retrieving companies");
+
+        List<Company> companies = companyDao.retrieveCompanyPartName(name);
+
+        if (companies.size() > 0) {
+            LOGGER.info("Found it");
+        } else {
+            LOGGER.error(FacadeException.NOTHING_FOUND);
+        }
+        return companies;
     }
 
-    public List<Employee> searchEmployee(String partOfName) {
-        List<Employee> employeeList = employeeDao.retrieve_PartOfLastName(partOfName);
-        return employeeList;
+    public List<Employee> findEmployee(String lastname) {
+
+        LOGGER.info("Retrieving employees");
+
+        List<Employee> employees = employeeDao.retrieveEmployeePartName(lastname);
+
+        if (employees.size() > 0) {
+            LOGGER.info("Found it");
+        } else {
+            LOGGER.error(FacadeException.NOTHING_FOUND);
+        }
+        return employees;
     }
 }
